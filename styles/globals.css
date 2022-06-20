@@ -11,3 +11,71 @@
 html{
   scroll-behavior: smooth;
 }
+
+body{
+  background-image: url(../public/assets/images/Galaxy-background.png);
+  background-color: #000000;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+.max-width {
+  width: 90%;
+  max-width: 96rem;
+}
+
+.nav{
+  transition-timing-function: ease-in-out;
+  transition: all 0.5s;
+}
+
+.nav_background {
+ @apply bg-main-800 fixed top-0 inset-x-0 ;
+}
+
+.nav-link {
+ @apply border-none text-base uppercase text-white-100 hover:text-accent-900 relative md:w-full w-max;
+ letter-spacing: 0.12rem;
+}
+
+.nav-link::after {
+ content: "";
+ position: absolute;
+ bottom: -0.3rem;
+ left: 0;
+ width: 0%;
+ height: 1px;
+ background: #FF0077;
+ opacity: 0;
+ transition: all 350ms ease-in-out;
+}
+
+.nav-link:hover::after {
+ @apply w-full opacity-[1];
+}
+
+.nav-link_active::after {
+ content: "";
+ position: absolute;
+ bottom: -0.3rem;
+ width: 100%;
+ left: 0;
+ height: 1px;
+ background: #FF0077;
+ opacity: 1;
+ transition: all 350ms ease-in-out;
+}
+
+.homeContainer{
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh; 
+  /* scroll-padding-top: 60px; */
+}
+
+.homeContainer > section, footer{
+  scroll-snap-align: start;
+}
