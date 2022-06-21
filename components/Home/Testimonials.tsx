@@ -5,8 +5,7 @@ import {
 } from "react-icons/ti";
 
 const Testimonials = () => {
-
-    const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const testimonies = [
     {
@@ -44,14 +43,14 @@ const Testimonials = () => {
     },
   ];
   return (
-    <section className="h-screen max-width mx-auto pt-14 flex flex-col justify-center items-center">
-      <h2 className="text-center text-white-50 text-6xl font-bold">
+    <section className="min-h-screen max-width mx-auto py-20 pt-24 flex flex-col justify-center items-center">
+      <h2 className="text-center text-white-50 text-3xl md:text-6xl font-bold">
         What Others Say About Me
       </h2>
-      <div className="h-1 w-56 bg-accent rounded-sm my-4" />
-      <div className="h-max w-3/4 p-6 bg-white/60 rounded-md backdrop-blur-sm flex justify-between items-stretch">
-        <div className="w-3/4 min-h-[360px] flex flex-col justify-between">
-          <div className="flex gap-4 items-center">
+      <div className="h-1 w-32 md:w-56 bg-accent rounded-sm my-4" />
+      <div className="h-max w-full lg:w-3/4 p-6 bg-white/60 rounded-md backdrop-blur-sm flex flex-col lg:flex-row justify-between items-stretch">
+        <div className="w-full lg:w-3/4 min-h-[360px] flex flex-col justify-between">
+          <div className="flex gap-4 items-center justify-center lg:justify-start">
             <img
               src={testimonies[activeIndex].image_url}
               alt={testimonies[activeIndex].name}
@@ -61,35 +60,45 @@ const Testimonials = () => {
               {testimonies[activeIndex].name}
             </h3>
           </div>
-          <p className="pr-12 py-6 tracking-wide text-lg">{testimonies[activeIndex].content}</p>
+          <p className="text-center lg:text-left lg:pr-12 py-6 tracking-wide text-lg">
+            {testimonies[activeIndex].content}
+          </p>
           <div>
-          <h4 className="italic text-xl">{testimonies[activeIndex].designation}</h4>
-          <div className="text-4xl flex items-center">
-            {
-                testimonies[activeIndex].linkedin_url && <a href={testimonies[activeIndex].linkedin_url} target="_blank">
-                    <TiSocialLinkedinCircular />
+            <h4 className="italic text-lg font-light">
+              {testimonies[activeIndex].designation}
+            </h4>
+            <div className="text-4xl flex items-center">
+              {testimonies[activeIndex].linkedin_url && (
+                <a href={testimonies[activeIndex].linkedin_url} target="_blank">
+                  <TiSocialLinkedinCircular />
                 </a>
-            }
-            {
-                testimonies[activeIndex].twitter_url && <a href={testimonies[activeIndex].twitter_url} target="_blank">
-                    <TiSocialTwitterCircular />
+              )}
+              {testimonies[activeIndex].twitter_url && (
+                <a href={testimonies[activeIndex].twitter_url} target="_blank">
+                  <TiSocialTwitterCircular />
                 </a>
-            }
-            
-            
-          </div>
+              )}
+            </div>
           </div>
         </div>
-        <div className="w-1/4 border-l-2 px-2 bg-black/60 rounded-md">
+        <div className="w-full lg:w-1/4 mt-4 lg:mt-0 px-2 bg-black/60 rounded-md flex flex-col justify-center">
           {testimonies.map((testimonie, index) => {
             return (
-              <div className={`${activeIndex === index ? '' : 'grayscale opacity-50'} flex gap-2 items-center py-3 cursor-pointer`} key={index} onClick={()=> setActiveIndex(index)}>
+              <div
+                className={`${
+                  activeIndex === index ? "" : "grayscale opacity-50"
+                } flex gap-2 items-center py-3 cursor-pointer`}
+                key={index}
+                onClick={() => setActiveIndex(index)}
+              >
                 <img
                   src={testimonie.image_url}
                   alt={testimonie.name}
                   className="w-8 rounded-full"
                 />
-                <h4 className="text-lg font-normal text-white">{testimonie.name}</h4>
+                <h4 className="text-lg font-normal text-white">
+                  {testimonie.name}
+                </h4>
               </div>
             );
           })}
