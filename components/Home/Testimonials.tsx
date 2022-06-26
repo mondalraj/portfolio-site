@@ -81,12 +81,12 @@ const Testimonials = () => {
             </div>
           </div>
         </div>
-        <div className="w-full lg:w-1/4 mt-4 lg:mt-0 px-2 bg-black/60 rounded-md flex flex-col justify-center">
+        <div className="w-full lg:w-1/4 mt-4 lg:mt-0 pl-2 bg-black/60 rounded-md flex flex-col">
           {testimonies.map((testimonie, index) => {
             return (
               <div
                 className={`${
-                  activeIndex === index ? "" : "grayscale opacity-50"
+                  activeIndex === index ? "border-r-4 border-white" : "grayscale opacity-50"
                 } flex gap-2 items-center py-3 cursor-pointer`}
                 key={index}
                 onClick={() => setActiveIndex(index)}
