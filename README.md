@@ -17,11 +17,11 @@
 - React Hook Form (Form Handling)
 - Framer Motion (Animation)
 - Storybook (Component Library)
+- Github Actions (CI/CD)
 - Jest (Unit Testing)
 - Cypress (E2E Testing)
 - Docker (Containerization)
 - Kubernetes (Container Orchestration)
-- Github Actions (CI/CD)
 
 ### Getting Started with the boilerplate
 
