@@ -1,0 +1,41 @@
+{
+  "cSpell.ignorePaths": [
+    "package-lock.json",
+    "node_modules",
+    "vscode-extension",
+    ".git/objects",
+    ".vscode",
+    ".vscode-insiders",
+    "yarn.lock",
+    ".env.*",
+    ".dc.*"
+  ],
+  "cSpell.words": [
+    "Rajib",
+    "autosize",
+    "commitlint",
+    "Ecommerce",
+    "Mondal",
+    "mantine",
+    "mockdata",
+    "nvmrc",
+    "nprogress",
+    "stylelint",
+    "tabler",
+    "tanstack",
+    "treeshake",
+    "twofa",
+    "varient",
+    "Wories",
+    "zustand"
+  ],
+
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.formatOnPaste": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.organizeImports": true
+  }
+}
