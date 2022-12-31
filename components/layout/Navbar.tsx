@@ -78,6 +78,7 @@ const Navbar = ({ currentPage }: { currentPage: string }) => {
                     top: "3.5rem",
                     right: "1rem",
                     zIndex: 100,
+                    width: "50%",
                   }}
                 >
                   <Box
@@ -85,7 +86,6 @@ const Navbar = ({ currentPage }: { currentPage: string }) => {
                       display: "flex",
                       flexDirection: "column",
                       gap: "0.5rem",
-
                       backgroundColor: theme.colors.dark[9],
                       boxShadow: "0 0 5px 1px rgba(255, 255, 255, 0.1)",
                       padding: "1rem",
@@ -130,7 +130,18 @@ const Navbar = ({ currentPage }: { currentPage: string }) => {
                     >
                       Work
                     </Button>
-                    {/* <Box>Blogs</Box> */}
+                    <Button
+                      variant={currentPage === "Blogs" ? "gradient" : "subtle"}
+                      component={Link}
+                      href="/blogs"
+                      sx={{
+                        cursor: "none",
+                        color: currentPage === "Blogs" ? "black" : "gray",
+                      }}
+                      gradient={{ from: "#F3EC78", to: "#EA7EEB", deg: 45 }}
+                    >
+                      Blogs
+                    </Button>
                     <Button
                       variant={
                         currentPage === "Contact" ? "gradient" : "subtle"
@@ -197,7 +208,19 @@ const Navbar = ({ currentPage }: { currentPage: string }) => {
               >
                 Work
               </Button>
-              {/* <Box>Blogs</Box> */}
+              <Button
+                variant={currentPage === "Blogs" ? "gradient" : "subtle"}
+                color={"gray"}
+                component={Link}
+                href="/blogs"
+                sx={{
+                  cursor: "none",
+                  color: currentPage === "Blogs" ? "black" : "white.4",
+                }}
+                gradient={{ from: "#F3EC78", to: "#EA7EEB", deg: 45 }}
+              >
+                Blogs
+              </Button>
               <Button
                 variant={currentPage === "Contact" ? "gradient" : "subtle"}
                 color={"gray"}

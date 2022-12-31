@@ -1,4 +1,11 @@
-import { ActionIcon, Affix, Box, Container, Transition } from "@mantine/core";
+import {
+  ActionIcon,
+  Affix,
+  Box,
+  Container,
+  Tooltip,
+  Transition,
+} from "@mantine/core";
 import { useWindowScroll } from "@mantine/hooks";
 import { IconChevronUp } from "@tabler/icons";
 import { motion, useScroll, useSpring } from "framer-motion";
@@ -70,20 +77,27 @@ const Layout = ({
       <Affix position={{ bottom: 20, right: 20 }}>
         <Transition transition="slide-up" mounted={scroll.y > 0}>
           {(transitionStyles) => (
-            <ActionIcon
-              size={"xl"}
-              radius="xl"
-              color="pink"
-              variant="filled"
-              style={transitionStyles}
-              onClick={() => scrollTo({ y: 0 })}
-              sx={{
-                cursor: "none",
-              }}
-              title="Scroll to top"
+            <Tooltip
+              withArrow
+              openDelay={500}
+              closeDelay={200}
+              label="Scroll to top"
             >
-              <IconChevronUp size={20} />
-            </ActionIcon>
+              <ActionIcon
+                size={"xl"}
+                radius="xl"
+                color="pink"
+                variant="filled"
+                style={transitionStyles}
+                onClick={() => scrollTo({ y: 0 })}
+                sx={{
+                  cursor: "none",
+                }}
+                title="Scroll to top"
+              >
+                <IconChevronUp size={20} />
+              </ActionIcon>
+            </Tooltip>
           )}
         </Transition>
       </Affix>

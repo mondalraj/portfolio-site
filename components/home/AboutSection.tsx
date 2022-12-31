@@ -119,94 +119,126 @@ const AboutSection = () => {
           }}
         >
           <Tooltip label="Github" withArrow>
-            <ActionIcon
-              size="lg"
-              color="gray"
-              radius={100}
-              variant="outline"
-              sx={{
-                padding: "0.35rem",
-                cursor: "none",
-              }}
+            <a
+              href="https://github.com/mondalraj"
+              target={"_blank"}
+              rel="noreferrer"
             >
-              <IconBrandGithub size={26} />
-            </ActionIcon>
+              <ActionIcon
+                size="lg"
+                color="gray"
+                radius={100}
+                variant="outline"
+                sx={{
+                  padding: "0.35rem",
+                  cursor: "none",
+                }}
+              >
+                <IconBrandGithub size={26} />
+              </ActionIcon>
+            </a>
           </Tooltip>
           <Tooltip label="Linkedin" withArrow>
-            <ActionIcon
-              size="lg"
-              color="gray"
-              radius={100}
-              variant="outline"
-              sx={{
-                padding: "0.35rem",
-                cursor: "none",
-              }}
+            <a
+              href="https://www.linkedin.com/in/mondalraj/"
+              target={"_blank"}
+              rel="noreferrer"
             >
-              <IconBrandLinkedin size={26} />
-            </ActionIcon>
+              <ActionIcon
+                size="lg"
+                color="gray"
+                radius={100}
+                variant="outline"
+                sx={{
+                  padding: "0.35rem",
+                  cursor: "none",
+                }}
+              >
+                <IconBrandLinkedin size={26} />
+              </ActionIcon>
+            </a>
           </Tooltip>
           <Tooltip label="Twitter" withArrow>
-            <ActionIcon
-              size="lg"
-              color="gray"
-              radius={100}
-              variant="outline"
-              sx={{
-                padding: "0.35rem",
-                cursor: "none",
-              }}
+            <a
+              href="https://twitter.com/raj_mondal2002"
+              target={"_blank"}
+              rel="noreferrer"
             >
-              <IconBrandTwitter size={26} />
-            </ActionIcon>
+              <ActionIcon
+                size="lg"
+                color="gray"
+                radius={100}
+                variant="outline"
+                sx={{
+                  padding: "0.35rem",
+                  cursor: "none",
+                }}
+              >
+                <IconBrandTwitter size={26} />
+              </ActionIcon>
+            </a>
           </Tooltip>
           <Tooltip label="Hashnode" withArrow>
-            <ActionIcon
-              size="lg"
-              color="gray"
-              radius={100}
-              variant="outline"
-              sx={{
-                padding: "0.35rem",
-                cursor: "none",
-              }}
+            <a
+              href="https://rajibmondal.hashnode.dev/"
+              target={"_blank"}
+              rel="noreferrer"
             >
-              <Image
-                src="/images/hashnode-icon.png"
-                alt="Hashnode icon"
-                width={20}
-                height={20}
+              <ActionIcon
+                size="lg"
                 color="gray"
-              />
-            </ActionIcon>
+                radius={100}
+                variant="outline"
+                sx={{
+                  padding: "0.35rem",
+                  cursor: "none",
+                }}
+              >
+                <Image
+                  src="/images/hashnode-icon.png"
+                  alt="Hashnode icon"
+                  width={20}
+                  height={20}
+                  color="gray"
+                />
+              </ActionIcon>
+            </a>
           </Tooltip>
           <Tooltip label="Gmail" withArrow>
-            <ActionIcon
-              size="lg"
-              color="gray"
-              radius={10}
-              variant="outline"
-              sx={{
-                padding: "0.35rem",
-                cursor: "none",
-              }}
-            >
-              <IconMail size={26} />
-            </ActionIcon>
+            <a href="mailto:mondalrajib2002@gmail.com">
+              <ActionIcon
+                size="lg"
+                color="gray"
+                radius={10}
+                variant="outline"
+                sx={{
+                  padding: "0.35rem",
+                  cursor: "none",
+                }}
+              >
+                <IconMail size={26} />
+              </ActionIcon>
+            </a>
           </Tooltip>
           <Tooltip label="Download Resume" withArrow>
-            <ActionIcon
-              size="lg"
-              color="gray"
-              radius={10}
-              variant="outline"
-              sx={{
-                padding: "0.35rem",
-                cursor: "none",
-              }}
+            <a
+              href="https://drive.google.com/file/d/1rksFf-O-Q1CDk_tSOzSQYf7fG0invQwQ/view?usp=sharing"
+              target={"_blank"}
+              rel="noreferrer"
             >
-              <IconDownload size={26} />
-            </ActionIcon>
+              <ActionIcon
+                size="lg"
+                color="gray"
+                radius={10}
+                variant="outline"
+                sx={{
+                  padding: "0.35rem",
+                  cursor: "none",
+                }}
+              >
+                <IconDownload size={26} />
+              </ActionIcon>
+            </a>
           </Tooltip>
         </Box>
       </Box>

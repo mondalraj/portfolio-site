@@ -176,6 +176,7 @@ const WorkSection = () => {
           },
         }}
         size="lg"
+        color="blue.5"
         component={Link}
         href="/work"
       >

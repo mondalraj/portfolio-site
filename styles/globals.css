@@ -115,30 +115,30 @@ a {
   transform: translate(-50%, -50%);
   filter: blur(624px);
   background-color: #3747d7;
-  animation: movingBall 80s linear infinite;
+  animation: movingBall 60s linear infinite;
   z-index: 1;
 }
 
 @keyframes movingBall {
   0% {
-    left: 20%;
-    top: 40%;
+    left: 10%;
+    top: 10%;
   }
   25% {
-    left: 40%;
-    top: 80%;
+    left: 20%;
+    top: 60%;
   }
   50% {
     left: 80%;
     top: 80%;
   }
   75% {
-    left: 80%;
-    top: 40%;
+    left: 60%;
+    top: 20%;
   }
   100% {
-    left: 20%;
-    top: 40%;
+    left: 10%;
+    top: 10%;
   }
 }
 
