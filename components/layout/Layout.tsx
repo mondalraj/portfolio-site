@@ -1,4 +1,6 @@
-import { Box, Container } from "@mantine/core";
+import { ActionIcon, Affix, Box, Container, Transition } from "@mantine/core";
+import { useWindowScroll } from "@mantine/hooks";
+import { IconChevronUp } from "@tabler/icons";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { ReactNode, useEffect, useState } from "react";
 import IsMobileScreen from "../../hooks/useIsMobileScreen";
@@ -12,6 +14,7 @@ const Layout = ({
   children: ReactNode;
   currentPage: string;
 }) => {
+  const [scroll, scrollTo] = useWindowScroll();
   const [mousePosition, setMousePosition] = useState({
     x: 0,
     y: 0,
@@ -64,6 +67,26 @@ const Layout = ({
       <Container>{children}</Container>
 
       <Footer />
+      <Affix position={{ bottom: 20, right: 20 }}>
+        <Transition transition="slide-up" mounted={scroll.y > 0}>
+          {(transitionStyles) => (
+            <ActionIcon
+              size={"xl"}
+              radius="xl"
+              color="pink"
+              variant="filled"
+              style={transitionStyles}
+              onClick={() => scrollTo({ y: 0 })}
+              sx={{
+                cursor: "none",
+              }}
+              title="Scroll to top"
+            >
+              <IconChevronUp size={20} />
+            </ActionIcon>
+          )}
+        </Transition>
+      </Affix>
     </Box>
   );
 };

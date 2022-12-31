@@ -22,7 +22,6 @@ const WorkSection = () => {
         <Timeline.Item
           active={true}
           color="pink"
-          lineActive={true}
           bullet={
             <Image
               src="/images/simplyjet-logo.jpeg"
@@ -151,12 +150,13 @@ const WorkSection = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          gap: "0.5rem",
+          gap: "0.25rem",
           marginTop: "1rem",
           zIndex: 100,
 
           "&:hover": {
             color: "white",
+            gap: "0.5rem",
             transition: "all 0.3s ease-in-out",
           },
 

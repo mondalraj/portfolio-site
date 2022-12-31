@@ -94,11 +94,11 @@ const Navbar = ({ currentPage }: { currentPage: string }) => {
                   >
                     <Button
                       variant={currentPage === "Home" ? "gradient" : "subtle"}
-                      color={"gray"}
                       component={Link}
                       href="/"
                       sx={{
                         cursor: "none",
+                        color: currentPage === "Home" ? "black" : "gray",
                       }}
                       gradient={{ from: "#F3EC78", to: "#EA7EEB", deg: 45 }}
                     >
@@ -108,11 +108,11 @@ const Navbar = ({ currentPage }: { currentPage: string }) => {
                       variant={
                         currentPage === "Projects" ? "gradient" : "subtle"
                       }
-                      color={"gray"}
                       component={Link}
                       href="/projects"
                       sx={{
                         cursor: "none",
+                        color: currentPage === "Projects" ? "black" : "gray",
                       }}
                       gradient={{ from: "#F3EC78", to: "#EA7EEB", deg: 45 }}
                     >
@@ -120,11 +120,11 @@ const Navbar = ({ currentPage }: { currentPage: string }) => {
                     </Button>
                     <Button
                       variant={currentPage === "Work" ? "gradient" : "subtle"}
-                      color={"gray"}
                       component={Link}
                       href="/work"
                       sx={{
                         cursor: "none",
+                        color: currentPage === "Work" ? "black" : "gray",
                       }}
                       gradient={{ from: "#F3EC78", to: "#EA7EEB", deg: 45 }}
                     >
@@ -135,11 +135,11 @@ const Navbar = ({ currentPage }: { currentPage: string }) => {
                       variant={
                         currentPage === "Contact" ? "gradient" : "subtle"
                       }
-                      color={"gray"}
                       component={Link}
                       href="/contact"
                       sx={{
                         cursor: "none",
+                        color: currentPage === "Contact" ? "black" : "gray",
                       }}
                       gradient={{ from: "#F3EC78", to: "#EA7EEB", deg: 45 }}
                     >
