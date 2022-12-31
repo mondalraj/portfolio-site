@@ -1,6 +1,8 @@
-import { Box, Container, ScrollArea } from "@mantine/core";
-import { motion } from "framer-motion";
+import { Box, Container } from "@mantine/core";
+import { motion, useScroll, useSpring } from "framer-motion";
 import { ReactNode, useEffect, useState } from "react";
+import IsMobileScreen from "../../hooks/useIsMobileScreen";
+import Footer from "./Footer";
 import Navbar from "./Navbar";
 
 const Layout = ({
@@ -37,27 +39,31 @@ const Layout = ({
     },
   };
 
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
+
   return (
     <Box
       sx={(theme) => ({
         backgroundColor: theme.colors.dark[9],
-        height: "100vh",
+        minHeight: "100vh",
         width: "100%",
         position: "relative",
       })}
     >
+      <motion.div className="progress-bar" style={{ scaleX }} />
       <div className="movingBall" />
-      <motion.div className="cursor" variants={variants} animate="default" />
-
+      {!IsMobileScreen() && (
+        <motion.div className="cursor" variants={variants} animate="default" />
+      )}
       <Navbar currentPage={currentPage} />
-      <ScrollArea
-        style={{ height: "calc(100% - 4.5rem)" }}
-        type="scroll"
-        scrollbarSize={4}
-        scrollHideDelay={500}
-      >
-        <Container>{children}</Container>
-      </ScrollArea>
+      <Container>{children}</Container>
+
+      <Footer />
     </Box>
   );
 };

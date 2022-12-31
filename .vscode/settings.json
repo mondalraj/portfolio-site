@@ -22,12 +22,16 @@
     "nprogress",
     "stylelint",
     "tabler",
-    "tanstack",
-    "treeshake",
-    "twofa",
+    "hashnode",
+    "Laussane",
+    "underline",
     "varient",
-    "Wories",
-    "zustand"
+    "mondalraj",
+    "zustand",
+    "signup",
+    "Razorpay",
+    "simplyjet",
+    "datapitcher"
   ],
 
   "editor.formatOnSave": true,
