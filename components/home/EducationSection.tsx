@@ -18,6 +18,7 @@ const EducationSection = () => {
       </Text>
       <Timeline active={0} bulletSize={40} lineWidth={3}>
         <Timeline.Item
+          pb={30}
           color="pink"
           bullet={<IconDeviceLaptop size={24} color="white" />}
           title={

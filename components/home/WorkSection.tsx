@@ -20,6 +20,7 @@ const WorkSection = () => {
       </Text>
       <Timeline active={0} bulletSize={40} lineWidth={3}>
         <Timeline.Item
+          pb={30}
           active={true}
           color="pink"
           bullet={
