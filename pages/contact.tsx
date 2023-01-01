@@ -73,11 +73,11 @@ const Contact = () => {
                   autoFocus
                   autoComplete="off"
                   sx={{
-                    borderBottom: "1px solid gray",
+                    borderBottom: "2px solid gray",
                     transition: "all 0.3s ease",
 
                     "&:focus-within": {
-                      borderColor: "white",
+                      borderImage: "linear-gradient(#f3ec78, #ea7eeb) 45",
                       transition: "all 0.3s ease",
                     },
                   }}
@@ -101,11 +101,11 @@ const Contact = () => {
                   variant="unstyled"
                   size="md"
                   sx={{
-                    borderBottom: "1px solid gray",
+                    borderBottom: "2px solid gray",
                     transition: "all 0.3s ease",
 
                     "&:focus-within": {
-                      borderColor: "white",
+                      borderImage: "linear-gradient(#f3ec78, #ea7eeb) 45",
                       transition: "all 0.3s ease",
                     },
                   }}
@@ -128,11 +128,11 @@ const Contact = () => {
                 autoComplete="off"
                 size="md"
                 sx={{
-                  borderBottom: "1px solid gray",
+                  borderBottom: "2px solid gray",
                   transition: "all 0.3s ease",
 
                   "&:focus-within": {
-                    borderColor: "white",
+                    borderImage: "linear-gradient(#f3ec78, #ea7eeb) 45",
                     transition: "all 0.3s ease",
                   },
                 }}

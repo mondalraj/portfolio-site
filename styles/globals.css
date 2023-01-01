@@ -143,7 +143,9 @@ a {
 }
 
 .cursor {
-  background-color: rgba(39, 39, 39, 0.1);
+  /* background-color: rgba(39, 39, 39, 0.1); */
+  background-color: transparent;
+  /* background-color: pink; */
   border: 1px solid #fff;
   height: 32px;
   width: 32px;
@@ -151,9 +153,10 @@ a {
   position: fixed;
   top: 0;
   left: 0;
-  /* backdrop-filter: grayscale(100%); */
-  backdrop-filter: blur(2px);
-  /* z-index: 999; */
+  backdrop-filter: grayscale(100%);
+  pointer-events: none;
+  mix-blend-mode: difference;
+  z-index: 999;
 }
 
 .progress-bar {
