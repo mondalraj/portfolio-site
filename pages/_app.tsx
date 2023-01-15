@@ -11,7 +11,10 @@ export default function App(props: AppProps) {
     <>
       <Head>
         <title>Rajib Mondal | Full Stack Developer</title>
-        <meta name="description" content="Full Stack Developer Portfolio" />
+        <meta
+          name="description"
+          content="Self Taught Full Stack Developer with 2+ years of experience | Web3 Enthusiast"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
