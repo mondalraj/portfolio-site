@@ -37,7 +37,7 @@ const WorkSection = () => {
           }
           title={
             <Text size="lg" ml={10} color="white">
-              Front End Developer
+              Software Developer
             </Text>
           }
         >
