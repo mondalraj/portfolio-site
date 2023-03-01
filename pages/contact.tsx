@@ -1,8 +1,35 @@
+import emailjs from "@emailjs/browser";
 import { Box, Button, Input, Text, Textarea } from "@mantine/core";
 import { IconChevronRight } from "@tabler/icons";
+import { Notify } from "notiflix";
+import { useRef } from "react";
 import Layout from "../components/layout/Layout";
 
 const Contact = () => {
+  const form = useRef<HTMLFormElement>(null);
+
+  const sendEmail = (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_o8kyvkr",
+        "template_86htrws",
+        form.current as HTMLFormElement,
+        "user_Ne3ZYCjoIJybtjQLJDref"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          Notify.success("Message sent successfully!");
+        },
+        (error) => {
+          console.log(error.text);
+          Notify.failure("Message not sent. Please try again.");
+        }
+      );
+  };
+
   return (
     <Layout currentPage="Contact">
       <Box
@@ -34,6 +61,8 @@ const Contact = () => {
             Got a question or proposal, or just want to say hello? Go ahead.
           </Text>
           <form
+            ref={form}
+            onSubmit={sendEmail}
             autoComplete="off"
             style={{
               maxWidth: "800px",
@@ -66,6 +95,7 @@ const Contact = () => {
               >
                 <Input
                   id="name"
+                  name="name"
                   placeholder="Enter your name"
                   variant="unstyled"
                   size="md"
@@ -94,6 +124,7 @@ const Contact = () => {
               >
                 <Input
                   id="email"
+                  name="email"
                   placeholder="Enter your email"
                   type={"email"}
                   autoComplete="off"
@@ -125,6 +156,7 @@ const Contact = () => {
                 placeholder="Hi, I think we need a design system for our products at Company X. How soon can you hop on to discuss this? Thanks.."
                 variant="unstyled"
                 id="message"
+                name="message"
                 autoComplete="off"
                 size="md"
                 sx={{
@@ -136,7 +168,6 @@ const Contact = () => {
                     transition: "all 0.3s ease",
                   },
                 }}
-                name="message"
                 required
                 autosize
                 minRows={2}
