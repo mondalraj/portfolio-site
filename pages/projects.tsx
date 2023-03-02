@@ -75,7 +75,7 @@ const Projects = () => {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "flex-start",
-          gap: "1.5rem",
+          gap: "2rem",
           margin: "4rem 0",
         }}
       >

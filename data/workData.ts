@@ -14,6 +14,16 @@ const workData = [
   },
   {
     id: 2,
+    title: "Software Engineer Intern",
+    logo: "/images/tally-logo.png",
+    description: `I worked on a File Tagging Application using .NET Framework 4.7.2 Windows Form, C#, and SQLite Database. 
+    This File Tagging Application is for NTFS file systems in which users can add tags to a file, Example- School, College, Important, Work, etc. to their files so that they can search files easily on the basis of the tags added to the file.`,
+    company: "Tally Solutions Pvt Ltd",
+    location: "Bengaluru, India",
+    duration: "October 2022 - January 2023",
+  },
+  {
+    id: 3,
     title: "Full Stack Web Developer",
     logo: "/images/datapitcher-logo.jpeg",
     description: ` Worked as Backend and ReactJS developer Intern. 
@@ -24,6 +34,18 @@ const workData = [
     company: "DataPitcher",
     location: "Toronto, Canada",
     duration: "December 2021 - February 2022",
+  },
+  {
+    id: 4,
+    title: "Full Stack Development Mentor",
+    logo: "/images/10xacademy-logo.png",
+    description: `Mentored 100+ students to become Full Stack Developers.
+    Solved doubts related to ReactJS, NodeJS, ExpressJS, and MongoDB.
+    Taught students about effective communication skills.
+    Mentored students with problem-solving, Data Structures, and Algorithm problems.`,
+    company: "The 10x Academy",
+    location: "Hyderabad, india",
+    duration: "December 2021 - April 2022",
   },
 ];
 
