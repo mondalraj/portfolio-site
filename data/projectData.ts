@@ -1,9 +1,13 @@
+import { IconBrandMantine } from "@tabler/icons";
+import { AiOutlineFilePdf } from "react-icons/ai";
 import { DiCss3Full, DiMongodb } from "react-icons/di";
 import {
   SiEthereum,
   SiFramer,
   SiNextdotjs,
   SiNodedotjs,
+  SiPostgresql,
+  SiPrisma,
   SiReact,
   SiSolidity,
   SiTailwindcss,
@@ -30,20 +34,6 @@ const projectData = [
     tags: ["all", "frontend", "fullstack"],
   },
   {
-    title: " Netflix Clone",
-    description:
-      "This is the cloned homepage of Netflix, where I have fetched the data from the official TMDB API to render the list of movies and series in real-time.",
-    techStack: [
-      { name: "React.js", icon: SiReact },
-      { name: "CSS", icon: DiCss3Full },
-      { name: "MDB API", icon: TbApi },
-    ],
-    github: "https://github.com/mondalraj/netflix-clone",
-    demo: "https://clone-projects-ec1aa.web.app/",
-    thumbnail: "/images/projects/netflix.png",
-    tags: ["all", "frontend"],
-  },
-  {
     title: "InstaFund",
     description:
       "An end-to-end platform where people can fund campaigns within the deadline using crypto (ETH). Safe and Secure Decentralized application to get funding for your campaign.",
@@ -59,6 +49,37 @@ const projectData = [
     thumbnail: "/images/projects/instafund.png",
     tags: ["all", "frontend", "fullstack", "web3"],
   },
+  {
+    title: "Sleek CV",
+    description:
+      "A Resume Builder App with neat, clean structure and optimized for ATS that follows Jake's Resume Format. It is a fully responsive web application that can be used to create a resume in a few minutes without taking care of any design.",
+    techStack: [
+      { name: "Next.js", icon: SiNextdotjs },
+      { name: "Mantine UI", icon: IconBrandMantine },
+      { name: "React-PDF", icon: AiOutlineFilePdf },
+      { name: "Prisma", icon: SiPrisma },
+      { name: "PostgreSQL", icon: SiPostgresql },
+    ],
+    github: "https://github.com/mondalraj/SleekCV",
+    demo: "https://sleekcv.vercel.app/",
+    thumbnail: "/images/projects/sleekCV.png",
+    tags: ["all", "frontend", "fullstack"],
+  },
+  {
+    title: " Netflix Clone",
+    description:
+      "This is the cloned homepage of Netflix, where I have fetched the data from the official TMDB API to render the list of movies and series in real-time.",
+    techStack: [
+      { name: "React.js", icon: SiReact },
+      { name: "CSS", icon: DiCss3Full },
+      { name: "MDB API", icon: TbApi },
+    ],
+    github: "https://github.com/mondalraj/netflix-clone",
+    demo: "https://clone-projects-ec1aa.web.app/",
+    thumbnail: "/images/projects/netflix.png",
+    tags: ["all", "frontend"],
+  },
+
   {
     title: "Mojlo",
     description:
