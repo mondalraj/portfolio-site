@@ -1,5 +1,5 @@
 import { ActionIcon, Box, Text, Tooltip } from "@mantine/core";
-import { IconChevronRight } from "@tabler/icons";
+import { IconChevronRight, TablerIcon } from "@tabler/icons";
 import Image from "next/image";
 import { IconType } from "react-icons";
 import IsMobileScreen from "../../hooks/useIsMobileScreen";
@@ -9,7 +9,7 @@ interface IProps {
   description: string;
   techStack: {
     name: string;
-    icon: IconType;
+    icon: IconType | TablerIcon;
   }[];
   github: string;
   demo: string;
