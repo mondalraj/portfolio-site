@@ -2,6 +2,7 @@ import { IconBrandMantine } from "@tabler/icons";
 import { AiOutlineFilePdf } from "react-icons/ai";
 import { DiCss3Full, DiMongodb } from "react-icons/di";
 import {
+  SiAuth0,
   SiEthereum,
   SiFramer,
   SiNextdotjs,
@@ -52,11 +53,12 @@ const projectData = [
   {
     title: "Sleek CV",
     description:
-      "A Resume Builder App with neat, clean structure and optimized for ATS that follows Jake's Resume Format. It is a fully responsive web application that can be used to create a resume in a few minutes without taking care of any design.",
+      "A Resume Builder App with neat, clean structure and optimized for ATS that follows Jake's Resume Format. It has Github authentication and Prisma ORM for database management.",
     techStack: [
       { name: "Next.js", icon: SiNextdotjs },
       { name: "Mantine UI", icon: IconBrandMantine },
       { name: "React-PDF", icon: AiOutlineFilePdf },
+      { name: "Next-Auth", icon: SiAuth0 },
       { name: "Prisma", icon: SiPrisma },
       { name: "PostgreSQL", icon: SiPostgresql },
     ],
