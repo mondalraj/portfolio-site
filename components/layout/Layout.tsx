@@ -12,6 +12,7 @@ import { motion, useScroll, useSpring } from "framer-motion";
 import { ReactNode, useEffect, useState } from "react";
 import IsMobileScreen from "../../hooks/useIsMobileScreen";
 import Footer from "./Footer";
+import { FooterCTA } from "./FooterCTA";
 import Navbar from "./Navbar";
 
 const Layout = ({
@@ -72,6 +73,8 @@ const Layout = ({
       )}
       <Navbar currentPage={currentPage} />
       <Container>{children}</Container>
+
+      <FooterCTA />
 
       <Footer />
       <Affix position={{ bottom: 20, right: 20 }}>
