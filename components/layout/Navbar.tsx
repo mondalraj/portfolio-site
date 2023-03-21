@@ -156,6 +156,15 @@ const Navbar = ({ currentPage }: { currentPage: string }) => {
                     >
                       Contact
                     </Button>
+                    <Button
+                      component="a"
+                      target="_blank"
+                      href="https://calendly.com/mondalraj/30min"
+                      variant="outline"
+                      color="pink"
+                    >
+                      Schedule a Meet
+                    </Button>
                   </Box>
                 </motion.div>
               )}
@@ -233,6 +242,15 @@ const Navbar = ({ currentPage }: { currentPage: string }) => {
                 gradient={{ from: "#F3EC78", to: "#EA7EEB", deg: 45 }}
               >
                 Contact
+              </Button>
+              <Button
+                component="a"
+                target="_blank"
+                href="https://calendly.com/mondalraj/30min"
+                variant="outline"
+                color="pink"
+              >
+                Schedule a Meet
               </Button>
             </Box>
           )}

@@ -97,14 +97,19 @@ const AboutSection = () => {
               margin: "0 1rem",
             }}
           />
-          Web3 Enthusiast
+          Web3 Application Developer
         </Text>
         <Text size={"lg"}>
           I&apos;m a Full Stack Web Developer and have expertise with different
           technologies{" "}
-          <Text color="white" fw={700}>
-            {" "}
-            (React, TypeScript, Next.js, Node.js, Express.js, MongoDB, Python).
+          <Text
+            fw={700}
+            variant="gradient"
+            gradient={{ from: "#F3EC78", to: "#EA7EEB", deg: 45 }}
+            // ta="center"
+          >
+            (React, TypeScript, Next.js, Node.js, Express.js, PostgreSQL,
+            Python).
           </Text>
           Currently scratching my head on Web3 and Blockchain. Also practicing
           problem solving with Data Structures and Algorithms.

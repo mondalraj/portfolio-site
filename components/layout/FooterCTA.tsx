@@ -100,7 +100,7 @@ export function FooterCTA() {
   const { classes, cx } = useStyles();
 
   return (
-    <div className={classes.wrapper}>
+    <div className={classes.wrapper} id="#schedule-meeting">
       <Overlay color="#000" opacity={0.65} zIndex={1} />
 
       <div className={classes.inner}>
