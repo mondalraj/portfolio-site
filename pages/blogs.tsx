@@ -82,6 +82,7 @@ const Blogs = () => {
           return <HalfWidthBlog key={index} {...blog} position="right" />;
         }
       })}
+      <Box mt={20} />
     </Layout>
   );
 };

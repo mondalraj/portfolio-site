@@ -6,6 +6,7 @@ import {
   IconChevronRight,
   IconDownload,
   IconMail,
+  IconPhone,
 } from "@tabler/icons";
 import Image from "next/image";
 
@@ -37,6 +38,39 @@ const Footer = () => {
             paddingBottom: "2rem",
           }}
         >
+          <Tooltip label="Phone" withArrow>
+            <a href="tel:+9958164563" target={"_blank"} rel="noreferrer">
+              <ActionIcon
+                size="md"
+                color="gray"
+                radius={100}
+                variant="outline"
+                sx={{
+                  padding: "0.35rem",
+                  cursor: "none",
+                }}
+              >
+                <IconPhone size={26} />
+              </ActionIcon>
+            </a>
+          </Tooltip>
+
+          <Tooltip label="Gmail" withArrow>
+            <a href="mailto:mondalrajib2002@gmail.com">
+              <ActionIcon
+                size="md"
+                color="gray"
+                radius={100}
+                variant="outline"
+                sx={{
+                  padding: "0.25rem",
+                  cursor: "none",
+                }}
+              >
+                <IconMail size={26} />
+              </ActionIcon>
+            </a>
+          </Tooltip>
           <Tooltip label="Github" withArrow>
             <a
               href="https://github.com/mondalraj"
@@ -116,29 +150,14 @@ const Footer = () => {
                 <Image
                   src="/images/hashnode-icon.png"
                   alt="Hashnode icon"
-                  width={20}
-                  height={20}
+                  width={16}
+                  height={16}
                   color="gray"
                 />
               </ActionIcon>
             </a>
           </Tooltip>
-          <Tooltip label="Gmail" withArrow>
-            <a href="mailto:mondalrajib2002@gmail.com">
-              <ActionIcon
-                size="md"
-                color="gray"
-                radius={10}
-                variant="outline"
-                sx={{
-                  padding: "0.25rem",
-                  cursor: "none",
-                }}
-              >
-                <IconMail size={26} />
-              </ActionIcon>
-            </a>
-          </Tooltip>
+
           <Tooltip label="Download Resume" withArrow>
             <a
               href="https://drive.google.com/file/d/1rksFf-O-Q1CDk_tSOzSQYf7fG0invQwQ/view?usp=sharing"
@@ -148,7 +167,7 @@ const Footer = () => {
               <ActionIcon
                 size="md"
                 color="gray"
-                radius={10}
+                radius={100}
                 variant="outline"
                 sx={{
                   padding: "0.25rem",

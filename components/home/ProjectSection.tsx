@@ -3,13 +3,16 @@ import { ActionIcon, Box, Text, Tooltip } from "@mantine/core";
 import { IconChevronRight } from "@tabler/icons";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { DiCss3Full, DiMongodb } from "react-icons/di";
+import { DiMongodb } from "react-icons/di";
 import {
+  SiEthereum,
   SiFramer,
   SiNextdotjs,
   SiNodedotjs,
   SiReact,
+  SiSolidity,
   SiTailwindcss,
+  SiTypescript,
 } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
 
@@ -270,7 +273,7 @@ const ProjectSection = () => {
             }}
             size={"xl"}
           >
-            Netflix Clone
+            Insta Fund
           </Text>
           <Text
             sx={{
@@ -279,9 +282,9 @@ const ProjectSection = () => {
               marginBottom: "0.5rem",
             }}
           >
-            This is the cloned homepage of Netflix, where I have fetched the
-            data from the official TMDB API to render the list of movies and
-            series in real-time.
+            An end-to-end platform where people can fund campaigns within the
+            deadline using crypto (ETH). Safe and Secure Decentralized
+            application to get funding for your campaign.
           </Text>
 
           <Box
@@ -323,7 +326,7 @@ const ProjectSection = () => {
                 </ActionIcon>
               </Tooltip>
 
-              <Tooltip label="CSS" withArrow>
+              <Tooltip label="Typescript" withArrow>
                 <ActionIcon
                   sx={{
                     cursor: "none",
@@ -331,18 +334,38 @@ const ProjectSection = () => {
                   color={"blue"}
                   variant="transparent"
                 >
-                  <DiCss3Full size={24} />
+                  <SiTypescript size={24} />
                 </ActionIcon>
               </Tooltip>
 
-              <Tooltip label="TMDB API" withArrow>
+              <Tooltip label="Tailwind CSS" withArrow>
                 <ActionIcon
                   sx={{
                     cursor: "none",
                   }}
                   variant="transparent"
                 >
-                  <TbApi size={24} />
+                  <SiTailwindcss size={24} />
+                </ActionIcon>
+              </Tooltip>
+              <Tooltip label="Solidity" withArrow>
+                <ActionIcon
+                  sx={{
+                    cursor: "none",
+                  }}
+                  variant="transparent"
+                >
+                  <SiSolidity size={24} />
+                </ActionIcon>
+              </Tooltip>
+              <Tooltip label="Ethereum" withArrow>
+                <ActionIcon
+                  sx={{
+                    cursor: "none",
+                  }}
+                  variant="transparent"
+                >
+                  <SiEthereum size={24} />
                 </ActionIcon>
               </Tooltip>
             </Box>
@@ -370,7 +393,7 @@ const ProjectSection = () => {
             }}
             color={"blue.5"}
             component="a"
-            href="https://clone-projects-ec1aa.web.app/"
+            href="https://instafund.vercel.app/"
             target="_blank"
           >
             <span>Visit Site</span>
@@ -379,8 +402,8 @@ const ProjectSection = () => {
         </Box>
         <Box>
           <img
-            src="/images/projects/netflix.png"
-            alt="Netflix CLone"
+            src="/images/projects/instafund.png"
+            alt="Insta Fund"
             style={{
               borderTopLeftRadius: isMobileScreen ? "0" : "1rem",
               borderBottomRightRadius: isMobileScreen ? "1rem" : "0",

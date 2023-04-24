@@ -5,6 +5,7 @@ import {
   IconBrandTwitter,
   IconDownload,
   IconMail,
+  IconPhone,
 } from "@tabler/icons";
 import Image from "next/image";
 
@@ -123,6 +124,38 @@ const AboutSection = () => {
             gap: "1rem",
           }}
         >
+          <Tooltip label="Phone" withArrow>
+            <a href="tel:+9958164563" target={"_blank"} rel="noreferrer">
+              <ActionIcon
+                size="lg"
+                color="gray"
+                radius={100}
+                variant="outline"
+                sx={{
+                  padding: "0.35rem",
+                  cursor: "none",
+                }}
+              >
+                <IconPhone size={26} />
+              </ActionIcon>
+            </a>
+          </Tooltip>
+          <Tooltip label="Gmail" withArrow>
+            <a href="mailto:mondalrajib2002@gmail.com">
+              <ActionIcon
+                size="lg"
+                color="gray"
+                radius={100}
+                variant="outline"
+                sx={{
+                  padding: "0.35rem",
+                  cursor: "none",
+                }}
+              >
+                <IconMail size={26} />
+              </ActionIcon>
+            </a>
+          </Tooltip>
           <Tooltip label="Github" withArrow>
             <a
               href="https://github.com/mondalraj"
@@ -209,22 +242,7 @@ const AboutSection = () => {
               </ActionIcon>
             </a>
           </Tooltip>
-          <Tooltip label="Gmail" withArrow>
-            <a href="mailto:mondalrajib2002@gmail.com">
-              <ActionIcon
-                size="lg"
-                color="gray"
-                radius={10}
-                variant="outline"
-                sx={{
-                  padding: "0.35rem",
-                  cursor: "none",
-                }}
-              >
-                <IconMail size={26} />
-              </ActionIcon>
-            </a>
-          </Tooltip>
+
           <Tooltip label="Download Resume" withArrow>
             <a
               href="https://drive.google.com/file/d/1rksFf-O-Q1CDk_tSOzSQYf7fG0invQwQ/view?usp=sharing"
@@ -234,7 +252,7 @@ const AboutSection = () => {
               <ActionIcon
                 size="lg"
                 color="gray"
-                radius={10}
+                radius={100}
                 variant="outline"
                 sx={{
                   padding: "0.35rem",
