@@ -52,24 +52,6 @@ const Blogs = () => {
         <Text size="xl" color="dimmed" mt={20}>
           My Blogs and Videos
         </Text>
-        {/* <SegmentedControl
-          size={isMobileScreen ? "xs" : "sm"}
-          radius="md"
-          classNames={classes}
-          value={blogsType}
-          onChange={(value) => {
-            setBlogsType(value);
-          }}
-          my={16}
-          data={[
-            { label: "All Tags", value: "all" },
-            { label: "Front End", value: "frontend" },
-            { value: "backend", label: "Back End" },
-            { value: "web3", label: "Web 3" },
-            { value: "guide", label: "Guide" },
-            { value: "product", label: "Product" },
-          ]}
-        /> */}
       </Box>
       {blogData?.map((blog, index) => {
         if ((index + 1) % 3 === 1) {

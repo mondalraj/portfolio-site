@@ -1,5 +1,14 @@
 const blogData = [
   {
+    title: "How to approach System Design interview questions",
+    date: "Apr 25, 2023",
+    tag: "guide",
+    thumbnail: "/images/blogs/LoadBalancingSystemDesign.png",
+    url: "https://rajibmondal.hashnode.dev/how-to-approach-system-design-interview-questions",
+    description:
+      "Ace your system design interview with our comprehensive guide. Learn how to gather requirements, design architecture, handle edge cases, and communicate effectively.",
+  },
+  {
     title: "Roadmap to Full-Stack Development: Roles, Responsibilities, Skills",
     date: "Jan 1, 2023",
     tag: "guide",
