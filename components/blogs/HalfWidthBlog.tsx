@@ -26,6 +26,10 @@ const HalfWidthBlog = ({
       sx={{
         width: "50%",
         display: "inline-block",
+
+        "@media (max-width: 768px)": {
+          width: "100%",
+        },
       }}
     >
       <Box

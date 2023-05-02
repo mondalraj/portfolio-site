@@ -42,6 +42,12 @@ const FullWidthBlog = ({
           border: "1px solid rgba(255, 255, 255, 0.1)",
           transition: "all 0.2s ease-in-out",
         },
+
+        // media query
+        "@media (max-width: 768px)": {
+          flexDirection: "column",
+          gap: "0.5rem",
+        },
       }}
       onClick={() => {
         window.open(url, "_blank");
@@ -50,6 +56,10 @@ const FullWidthBlog = ({
       <Box
         sx={{
           width: "60%",
+
+          "@media (max-width: 768px)": {
+            width: "100%",
+          },
         }}
       >
         <Image
@@ -62,6 +72,9 @@ const FullWidthBlog = ({
       <Box
         sx={{
           width: "40%",
+          "@media (max-width: 768px)": {
+            width: "100%",
+          },
         }}
       >
         <Box
