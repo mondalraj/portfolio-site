@@ -198,7 +198,7 @@ const AboutSection = () => {
           </Tooltip>
           <Tooltip label="Twitter" withArrow>
             <a
-              href="https://twitter.com/raj_mondal2002"
+              href="https://twitter.com/_mondalraj"
               target={"_blank"}
               rel="noreferrer"
             >
