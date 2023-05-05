@@ -56,6 +56,7 @@ const projectData = [
       "A Resume Builder App with neat, clean structure and optimized for ATS that follows Jake's Resume Format. It has Github authentication and Prisma ORM for database management.",
     techStack: [
       { name: "Next.js", icon: SiNextdotjs },
+      { name: "Typescript", icon: SiTypescript },
       { name: "Mantine UI", icon: IconBrandMantine },
       { name: "React-PDF", icon: AiOutlineFilePdf },
       { name: "Next-Auth", icon: SiAuth0 },

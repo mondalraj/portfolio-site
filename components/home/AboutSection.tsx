@@ -245,7 +245,7 @@ const AboutSection = () => {
 
           <Tooltip label="Download Resume" withArrow>
             <a
-              href="https://drive.google.com/file/d/1rksFf-O-Q1CDk_tSOzSQYf7fG0invQwQ/view?usp=sharing"
+              href="https://drive.google.com/file/d/1FU3jo1o0XuFX-k4drttum9wz-61kq7Cu/view?usp=sharing"
               target={"_blank"}
               rel="noreferrer"
             >
