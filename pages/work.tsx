@@ -55,18 +55,30 @@ const Work = () => {
                 display: "flex",
                 alignItems: "center",
                 gap: "0.5rem",
+
+                "@media (max-width: 768px)": {
+                  flexDirection: "column",
+                  alignItems: "flex-start",
+                  gap: "0.2rem",
+                },
               }}
             >
-              {work.company}{" "}
+              <Text>{work.company} </Text>
               <Text
                 sx={{
                   width: "5px",
                   height: "5px",
                   borderRadius: "50%",
                   backgroundColor: "gray",
+
+                  "@media (max-width: 768px)": {
+                    display: "none",
+                  },
                 }}
               />
-              {work.location} - ({work.duration})
+              <Text>
+                {work.location} - ({work.duration})
+              </Text>
             </Text>
           </Timeline.Item>
         ))}

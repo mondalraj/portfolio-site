@@ -34,7 +34,7 @@ const ProjectCardRight = ({
         backgroundColor: "black",
         borderRadius: "1rem",
         // padding: "1rem",
-        border: `0.5px solid ${theme.colors.dark[7]}`,
+        border: `1px solid ${theme.colors.dark[7]}`,
         display: "flex",
         flexDirection: "row",
         justifyContent: "space-between",
@@ -48,7 +48,7 @@ const ProjectCardRight = ({
         },
 
         "&:hover": {
-          border: `0.5px solid ${theme.colors.dark[5]}`,
+          border: `1px solid ${theme.colors.dark[5]}`,
           transition: "all 0.5s ease",
         },
       })}
