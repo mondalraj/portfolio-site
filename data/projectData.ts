@@ -3,6 +3,7 @@ import { AiOutlineFilePdf } from "react-icons/ai";
 import { DiCss3Full, DiMongodb } from "react-icons/di";
 import {
   SiAuth0,
+  SiChainlink,
   SiEthereum,
   SiFramer,
   SiNextdotjs,
@@ -13,14 +14,32 @@ import {
   SiSolidity,
   SiTailwindcss,
   SiTypescript,
+  SiWeb3Dotjs,
 } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
 
 const projectData = [
   {
+    title: "Collab X",
+    description:
+      "CollabX is a decentralized community platform that enables hustlers to collaborate on projects or ideas. It facilitates transparent decision-making through decentralized voting.",
+    techStack: [
+      { name: "Next.js", icon: SiNextdotjs },
+      { name: "Tailwind CSS", icon: SiTailwindcss },
+      { name: "Solidity", icon: SiSolidity },
+      { name: "Ethereum (Polygon)", icon: SiEthereum },
+      { name: "Chainlink", icon: SiChainlink },
+      { name: "Thirdweb", icon: SiWeb3Dotjs },
+    ],
+    github: "https://github.com/mondalraj/collabX",
+    demo: "https://collabx-beta.vercel.app/",
+    thumbnail: "/images/projects/collabx.png",
+    tags: ["all", "frontend", "fullstack", "web3"],
+  },
+  {
     title: "Devshowcase",
     description:
-      "This is where people who code, can connect, can showcase their development projects in front of whole coder&apos;s community. Get hired by startups to build your developer expertise.",
+      "This is where people who code, can connect, can showcase their development projects in front of whole coder's community. Get hired by startups to build your developer expertise.",
     techStack: [
       { name: "Next.js", icon: SiNextdotjs },
       { name: "Node.js", icon: SiNodedotjs },

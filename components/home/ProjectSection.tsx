@@ -3,18 +3,16 @@ import { ActionIcon, Box, Text, Tooltip } from "@mantine/core";
 import { IconChevronRight } from "@tabler/icons";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { DiMongodb } from "react-icons/di";
 import {
+  SiChainlink,
   SiEthereum,
-  SiFramer,
   SiNextdotjs,
-  SiNodedotjs,
   SiReact,
   SiSolidity,
   SiTailwindcss,
   SiTypescript,
+  SiWeb3Dotjs,
 } from "react-icons/si";
-import { TbApi } from "react-icons/tb";
 
 const ProjectSection = () => {
   const [isMobileScreen, setIsMobileScreen] = useState(false);
@@ -78,7 +76,7 @@ const ProjectSection = () => {
             }}
             size={"xl"}
           >
-            Devshowcase
+            Collab X
           </Text>
           <Text
             sx={{
@@ -87,9 +85,9 @@ const ProjectSection = () => {
               marginBottom: "0.5rem",
             }}
           >
-            This is where people who code, can connect, can showcase their
-            development projects in front of whole coder&apos;s community. Get
-            hired by startups to build your developer expertise.
+            CollabX is a decentralized community platform that enables hustlers
+            to collaborate on projects or ideas. It facilitates transparent
+            decision-making through decentralized voting.
           </Text>
 
           <Box
@@ -129,26 +127,25 @@ const ProjectSection = () => {
                   <SiNextdotjs size={24} />
                 </ActionIcon>
               </Tooltip>
-              <Tooltip label="Node.js" withArrow>
+              <Tooltip label="Solidity" withArrow>
                 <ActionIcon
                   sx={{
                     cursor: "none",
                   }}
-                  color={"teal"}
                   variant="transparent"
                 >
-                  <SiNodedotjs size={24} />
+                  <SiSolidity size={24} />
                 </ActionIcon>
               </Tooltip>
-              <Tooltip label="Mongo DB" withArrow>
+              <Tooltip label="Ethereum (Polygon)" withArrow>
                 <ActionIcon
                   sx={{
                     cursor: "none",
                   }}
-                  color={"green"}
+                  color={"grape"}
                   variant="transparent"
                 >
-                  <DiMongodb size={24} />
+                  <SiEthereum size={24} />
                 </ActionIcon>
               </Tooltip>
               <Tooltip label="Tailwind CSS" withArrow>
@@ -163,26 +160,26 @@ const ProjectSection = () => {
                 </ActionIcon>
               </Tooltip>
 
-              <Tooltip label="Framer Motion" withArrow>
+              <Tooltip label="Chainlink" withArrow>
                 <ActionIcon
                   sx={{
                     cursor: "none",
                   }}
-                  color={"grape"}
+                  color={"blue"}
                   variant="transparent"
                 >
-                  <SiFramer size={24} />
+                  <SiChainlink size={24} />
                 </ActionIcon>
               </Tooltip>
 
-              <Tooltip label="REST API" withArrow>
+              <Tooltip label="Thirdweb" withArrow>
                 <ActionIcon
                   sx={{
                     cursor: "none",
                   }}
                   variant="transparent"
                 >
-                  <TbApi size={24} />
+                  <SiWeb3Dotjs size={24} />
                 </ActionIcon>
               </Tooltip>
             </Box>
@@ -210,7 +207,7 @@ const ProjectSection = () => {
             }}
             color={"blue.5"}
             component="a"
-            href="https://devshowcase-22.vercel.app/"
+            href="https://collabx-beta.vercel.app/"
             target="_blank"
           >
             <span>Visit Site</span>
@@ -219,7 +216,7 @@ const ProjectSection = () => {
         </Box>
         <Box>
           <img
-            src="/images/projects/devshowcase.png"
+            src="/images/projects/collabx.png"
             alt="Devshowcase"
             style={{
               borderStartEndRadius: isMobileScreen ? "0" : "1rem",
