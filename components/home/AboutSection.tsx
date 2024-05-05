@@ -36,7 +36,13 @@ const AboutSection = () => {
           gap: "1.5rem",
         }}
       >
-        <h1>Rajib Mondal</h1>
+        <h1
+          style={{
+            color: "white",
+          }}
+        >
+          Rajib Mondal
+        </h1>
         <Text
           sx={{
             fontSize: "1.1rem",
@@ -46,7 +52,17 @@ const AboutSection = () => {
             color: "white",
           }}
         >
-          Software Developer&nbsp;
+          Software Developer
+          <Text
+            sx={{
+              width: "5px",
+              height: "5px",
+              borderRadius: "50%",
+              backgroundColor: "white",
+              margin: "0 1rem",
+            }}
+          />
+          Former SWE Intern&nbsp;
           <Text
             variant="gradient"
             gradient={{ from: "#F3EC78", to: "#EA7EEB", deg: 45 }}
@@ -56,7 +72,7 @@ const AboutSection = () => {
             }}
             fw={600}
           >
-            @SimplyJet
+            @Tally Solutions
           </Text>
           <Text
             sx={{
@@ -67,17 +83,7 @@ const AboutSection = () => {
               margin: "0 1rem",
             }}
           />
-          Full Stack Web Developer
-          <Text
-            sx={{
-              width: "5px",
-              height: "5px",
-              borderRadius: "50%",
-              backgroundColor: "white",
-              margin: "0 1rem",
-            }}
-          />
-          Mentored 100+ students&nbsp;
+          Mentored 200+&nbsp;
           <Text
             variant="gradient"
             gradient={{ from: "#F3EC78", to: "#EA7EEB", deg: 45 }}
@@ -87,8 +93,9 @@ const AboutSection = () => {
             }}
             fw={600}
           >
-            @10xAcademy
+            MERN&nbsp;
           </Text>
+          Aspirants
           <Text
             sx={{
               width: "5px",
@@ -98,22 +105,12 @@ const AboutSection = () => {
               margin: "0 1rem",
             }}
           />
-          Web3 Application Developer
+          Data Science Enthusiast
         </Text>
-        <Text size={"lg"}>
-          I&apos;m a Full Stack Web Developer and have expertise with different
-          technologies{" "}
-          <Text
-            fw={700}
-            variant="gradient"
-            gradient={{ from: "#F3EC78", to: "#EA7EEB", deg: 45 }}
-            // ta="center"
-          >
-            (React, TypeScript, Next.js, Node.js, Express.js, PostgreSQL,
-            Python).
-          </Text>
-          Currently scratching my head on Web3 and Blockchain. Also practicing
-          problem solving with Data Structures and Algorithms.
+        <Text size={"md"}>
+          Greetings, I am a seasoned full-stack software developer with a
+          proficiency in crafting robust and scalable end-to-end software
+          solutions, backed by over 2 years of hands-on industry experience.
         </Text>
         <Box
           sx={{

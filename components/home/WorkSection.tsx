@@ -15,7 +15,13 @@ const WorkSection = () => {
         margin: "4rem 0",
       }}
     >
-      <Text color={"dimmed"} size={28} fw={600} mb={10}>
+      <Text
+        variant="gradient"
+        gradient={{ from: "#F3EC78", to: "#EA7EEB", deg: 45 }}
+        size={28}
+        fw={600}
+        mb={10}
+      >
         Work Experience
       </Text>
       <Timeline active={0} bulletSize={40} lineWidth={3}>

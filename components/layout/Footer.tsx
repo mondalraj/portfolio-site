@@ -209,7 +209,7 @@ const Footer = () => {
           </Text>
         </Text>
         <Text align="center">
-          Copyright © github.com/mondalraj | 2023, All rights reserved
+          © 2024 github.com/mondalraj - All rights reserved
         </Text>
       </Container>
     </Box>

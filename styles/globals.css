@@ -106,7 +106,7 @@ a {
   text-decoration: none;
 }
 
-.movingBall {
+.movingBall-top {
   position: absolute;
   width: 300px;
   height: 300px;
@@ -115,11 +115,24 @@ a {
   transform: translate(-50%, -50%);
   filter: blur(624px);
   background-color: #3747d7;
-  animation: movingBall 60s linear infinite;
+  animation: movingBallTop 60s linear infinite;
   z-index: 1;
 }
 
-@keyframes movingBall {
+.movingBall-bottom {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  /* border-radius: 50%; */
+  opacity: 0.8;
+  transform: translate(-50%, -50%);
+  filter: blur(624px);
+  background-color: #3747d7;
+  animation: movingBallBottom 60s linear infinite;
+  z-index: 1;
+}
+
+@keyframes movingBallTop {
   0% {
     left: 10%;
     top: 10%;
@@ -139,6 +152,29 @@ a {
   100% {
     left: 10%;
     top: 10%;
+  }
+}
+
+@keyframes movingBallBottom {
+  0% {
+    left: 80%;
+    top: 80%;
+  }
+  25% {
+    left: 60%;
+    top: 20%;
+  }
+  50% {
+    left: 10%;
+    top: 10%;
+  }
+  75% {
+    left: 20%;
+    top: 60%;
+  }
+  100% {
+    left: 80%;
+    top: 80%;
   }
 }
 

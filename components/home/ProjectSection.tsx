@@ -29,10 +29,16 @@ const ProjectSection = () => {
         justifyContent: "center",
         alignItems: "flex-start",
         gap: "1.5rem",
-        margin: "4rem 0",
+        margin: "6rem 0",
       }}
     >
-      <Text color={"dimmed"} size={28} fw={600} mb={10}>
+      <Text
+        size={28}
+        fw={600}
+        mb={10}
+        variant="gradient"
+        gradient={{ from: "#F3EC78", to: "#EA7EEB", deg: 45 }}
+      >
         Projects
       </Text>
 

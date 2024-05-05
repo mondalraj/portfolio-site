@@ -67,7 +67,8 @@ const Layout = ({
       })}
     >
       <motion.div className="progress-bar" style={{ scaleX }} />
-      <div className="movingBall" />
+      <div className="movingBall-top" />
+      <div className="movingBall-bottom" />
       {!IsMobileScreen() && (
         <motion.div className="cursor" variants={variants} animate="default" />
       )}

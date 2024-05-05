@@ -20,22 +20,24 @@ import { TbApi } from "react-icons/tb";
 
 const projectData = [
   {
-    title: "Collab X",
+    title: "Sleek CV",
     description:
-      "CollabX is a decentralized community platform that enables hustlers to collaborate on projects or ideas. It facilitates transparent decision-making through decentralized voting.",
+      "A Resume Builder App with neat, clean structure and optimized for ATS that follows Jake's Resume Format. It has Github authentication and Prisma ORM for database management.",
     techStack: [
       { name: "Next.js", icon: SiNextdotjs },
-      { name: "Tailwind CSS", icon: SiTailwindcss },
-      { name: "Solidity", icon: SiSolidity },
-      { name: "Ethereum (Polygon)", icon: SiEthereum },
-      { name: "Chainlink", icon: SiChainlink },
-      { name: "Thirdweb", icon: SiWeb3Dotjs },
+      { name: "Typescript", icon: SiTypescript },
+      { name: "Mantine UI", icon: IconBrandMantine },
+      { name: "React-PDF", icon: AiOutlineFilePdf },
+      { name: "Next-Auth", icon: SiAuth0 },
+      { name: "Prisma", icon: SiPrisma },
+      { name: "PostgreSQL", icon: SiPostgresql },
     ],
-    github: "https://github.com/mondalraj/collabX",
-    demo: "https://collabx-beta.vercel.app/",
-    thumbnail: "/images/projects/collabx.png",
-    tags: ["all", "frontend", "fullstack", "web3"],
+    github: "https://github.com/mondalraj/SleekCV",
+    demo: "https://sleekcv.vercel.app/",
+    thumbnail: "/images/projects/sleekCV.png",
+    tags: ["all", "frontend", "fullstack"],
   },
+
   {
     title: "Devshowcase",
     description:
@@ -54,6 +56,23 @@ const projectData = [
     tags: ["all", "frontend", "fullstack"],
   },
   {
+    title: "Collab X",
+    description:
+      "CollabX is a decentralized community platform that enables hustlers to collaborate on projects or ideas. It facilitates transparent decision-making through decentralized voting.",
+    techStack: [
+      { name: "Next.js", icon: SiNextdotjs },
+      { name: "Tailwind CSS", icon: SiTailwindcss },
+      { name: "Solidity", icon: SiSolidity },
+      { name: "Ethereum (Polygon)", icon: SiEthereum },
+      { name: "Chainlink", icon: SiChainlink },
+      { name: "Thirdweb", icon: SiWeb3Dotjs },
+    ],
+    github: "https://github.com/mondalraj/collabX",
+    demo: "https://collabx-beta.vercel.app/",
+    thumbnail: "/images/projects/collabx.png",
+    tags: ["all", "frontend", "fullstack", "web3"],
+  },
+  {
     title: "InstaFund",
     description:
       "An end-to-end platform where people can fund campaigns within the deadline using crypto (ETH). Safe and Secure Decentralized application to get funding for your campaign.",
@@ -69,24 +88,7 @@ const projectData = [
     thumbnail: "/images/projects/instafund.png",
     tags: ["all", "frontend", "fullstack", "web3"],
   },
-  {
-    title: "Sleek CV",
-    description:
-      "A Resume Builder App with neat, clean structure and optimized for ATS that follows Jake's Resume Format. It has Github authentication and Prisma ORM for database management.",
-    techStack: [
-      { name: "Next.js", icon: SiNextdotjs },
-      { name: "Typescript", icon: SiTypescript },
-      { name: "Mantine UI", icon: IconBrandMantine },
-      { name: "React-PDF", icon: AiOutlineFilePdf },
-      { name: "Next-Auth", icon: SiAuth0 },
-      { name: "Prisma", icon: SiPrisma },
-      { name: "PostgreSQL", icon: SiPostgresql },
-    ],
-    github: "https://github.com/mondalraj/SleekCV",
-    demo: "https://sleekcv.vercel.app/",
-    thumbnail: "/images/projects/sleekCV.png",
-    tags: ["all", "frontend", "fullstack"],
-  },
+
   {
     title: " Netflix Clone",
     description:
@@ -94,7 +96,7 @@ const projectData = [
     techStack: [
       { name: "React.js", icon: SiReact },
       { name: "CSS", icon: DiCss3Full },
-      { name: "MDB API", icon: TbApi },
+      { name: "TMDB API", icon: TbApi },
     ],
     github: "https://github.com/mondalraj/netflix-clone",
     demo: "https://clone-projects-ec1aa.web.app/",
