@@ -3,11 +3,14 @@ import { IconBrandMantine, TablerIcon } from "@tabler/icons";
 import { IconType } from "react-icons";
 import { AiOutlineFilePdf } from "react-icons/ai";
 import { DiCss3Full, DiMongodb } from "react-icons/di";
+import { GrOptimize } from "react-icons/gr";
 import {
   SiAuth0,
   SiChainlink,
   SiEthereum,
+  SiExpress,
   SiFramer,
+  SiNestjs,
   SiNextdotjs,
   SiNodedotjs,
   SiPostgresql,
@@ -19,7 +22,6 @@ import {
   SiWeb3Dotjs,
 } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
-import { SiExpress, SiNestjs } from "react-icons/si";
 import CustomCarousel from "../skills/CustomCarousel";
 
 type TSkill = {
@@ -35,6 +37,7 @@ const skills: TSkill[] = [
   { name: "Node js", icon: SiNodedotjs },
   { name: "Express js", icon: SiExpress },
   { name: "Nest js", icon: SiNestjs },
+  { name: "SEO", icon: GrOptimize },
   { name: "React-PDF", icon: AiOutlineFilePdf },
   { name: "Next-Auth", icon: SiAuth0 },
   { name: "Prisma", icon: SiPrisma },
