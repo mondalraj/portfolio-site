@@ -3,11 +3,19 @@ const workData = [
     id: 1,
     title: "Software Developer",
     logo: "/images/simplyjet-logo.jpeg",
-    description: `Currently developing the frontend version 2.0 UI of the company's internal dashboard and client-facing website in React & NextJS with TypeScript. 
-    Made major improvements and added new features to the company's dashboard to increase the company's revenue and efficiency.
-    Developed a Slack App integration with the Whatsapp Cloud API in Python, and whenever a client messages on Whatsapp, a notification is sent to the Slack channel.
-    Brokers can even reply in the Slack thread, and the message is then automatically transmitted to the client using Whatsapp.
-    Created landing Pages for the website to increase reach and SEO of the website.`,
+    description: `Rebranding the company&apos;s website and admin dashboard using Typescript, NextJS, NestJS, PostgreSQL, Mantine UI, etc to increase the company&apos;s revenue and efficiency.
+
+     Developed complex operational workflow for brokers, admin, marketing team to manage their clients and leads efficiently.
+
+    Developing modern and responsive frontend UI using Mantine UI and Framer Motion that provides a seamless user experience.
+
+    Developed a Slack App integration with the Whatsapp Cloud API in Python, that makes the process of lead generation and conversion more smoother and efficient.
+
+     Developed a custom CMS system for the company to manage internationalization and localization of the website supporting 6 languages worldwide.
+     
+     Actively enhancing the company&apos;s website SEO by optimizing the website&apos;s performance and implementing new SEO strategies.
+     
+     Actively participating in the company&apos;s product development meetings and providing valuable insights to improve the product to meet the market&apos;s needs.`,
     company: "Simply Jet",
     location: "Laussane, Switzerland",
     duration: "March 2022 - Present",

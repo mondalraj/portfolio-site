@@ -110,7 +110,7 @@ const AboutSection = () => {
         <Text size={"md"}>
           Greetings, I am a seasoned full-stack software developer with a
           proficiency in crafting robust and scalable end-to-end software
-          solutions, backed by over 2 years of hands-on industry experience.
+          solutions, backed by over 3 years of hands-on industry experience.
         </Text>
         <Box
           sx={{

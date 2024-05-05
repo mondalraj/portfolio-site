@@ -1,9 +1,14 @@
 import { Box, Text } from "@mantine/core";
-import { IconBrandMantine, TablerIcon } from "@tabler/icons";
+import {
+  IconBrandMantine,
+  IconClipboardData,
+  IconSeo,
+  TablerIcon,
+} from "@tabler/icons";
 import { IconType } from "react-icons";
 import { AiOutlineFilePdf } from "react-icons/ai";
 import { DiCss3Full, DiMongodb } from "react-icons/di";
-import { GrOptimize } from "react-icons/gr";
+import { FaPython } from "react-icons/fa";
 import {
   SiAuth0,
   SiChainlink,
@@ -13,6 +18,7 @@ import {
   SiNestjs,
   SiNextdotjs,
   SiNodedotjs,
+  SiOpenai,
   SiPostgresql,
   SiPrisma,
   SiReact,
@@ -37,7 +43,7 @@ const skills: TSkill[] = [
   { name: "Node js", icon: SiNodedotjs },
   { name: "Express js", icon: SiExpress },
   { name: "Nest js", icon: SiNestjs },
-  { name: "SEO", icon: GrOptimize },
+  { name: "SEO", icon: IconSeo },
   { name: "React-PDF", icon: AiOutlineFilePdf },
   { name: "Next-Auth", icon: SiAuth0 },
   { name: "Prisma", icon: SiPrisma },
@@ -47,6 +53,9 @@ const skills: TSkill[] = [
   { name: "Tailwind CSS", icon: SiTailwindcss },
   { name: "Framer Motion", icon: SiFramer },
   { name: "REST API", icon: TbApi },
+  { name: "Python", icon: FaPython },
+  { name: "Generative AI", icon: SiOpenai },
+  { name: "Data Analysis", icon: IconClipboardData },
   { name: "Solidity", icon: SiSolidity },
   { name: "Ethereum", icon: SiEthereum },
   { name: "Chainlink", icon: SiChainlink },
@@ -55,7 +64,12 @@ const skills: TSkill[] = [
 
 const SkillsSection = () => {
   return (
-    <Box my={28}>
+    <Box
+      style={{
+        margin: "40px 0",
+        marginBottom: "100px",
+      }}
+    >
       <CustomCarousel>
         {skills?.map((item, index) => (
           <Box
