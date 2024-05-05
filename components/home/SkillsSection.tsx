@@ -1,5 +1,6 @@
 import { Box, Text } from "@mantine/core";
-import { IconBrandMantine } from "@tabler/icons";
+import { IconBrandMantine, TablerIcon } from "@tabler/icons";
+import { IconType } from "react-icons";
 import { AiOutlineFilePdf } from "react-icons/ai";
 import { DiCss3Full, DiMongodb } from "react-icons/di";
 import {
