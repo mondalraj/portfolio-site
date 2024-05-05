@@ -37,12 +37,17 @@ const EducationSection = () => {
           }
         >
           <Text size="md" ml={10}>
-            Currently in 3rd year with a CGPA of 9.5.
+            9.5 CGPA Overall.
             <br />
             Have worked on multiple projects in Web Development and Blockchain
             Technology with Technical Club Members (Codechef and GDSC).
             <br />
-            Taken part in multiple Hackathons and won 3 of them.
+            1st Runner Up in Incubate IND hackathon powered by Github.
+            <br />
+            2nd Runner Up in Tally CodeBrewers National Hackathon.
+            <br />
+            Top 8 in Hack-o-uplift hackathon powered by Devfolio out of 50
+            teams.
           </Text>
           <Text
             color="dimmed"
