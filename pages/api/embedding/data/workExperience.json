@@ -1,0 +1,40 @@
+{
+    "workExperience": [
+        {
+            "id": 1,
+            "title": "Software Developer",
+            "logo": "/images/simplyjet-logo.jpeg",
+            "description": "Rebranding the company's website and admin dashboard using Typescript, NextJS, NestJS, PostgreSQL, Mantine UI, etc to increase the company's revenue and efficiency.\n\nDeveloped complex operational workflow for brokers, admin, and the marketing team to manage their clients and leads efficiently.\n\nDeveloping modern and responsive frontend UI using Mantine UI and Framer Motion for a seamless user experience.\n\nDeveloped a Slack App integration with the Whatsapp Cloud API in Python for efficient lead generation and conversion.\n\nDeveloped a custom CMS system for internationalization and localization of the website, supporting 6 languages worldwide.\n\nActively enhancing the company's website SEO through performance optimization and new strategies.\n\nParticipating in product development meetings and providing insights to improve the product for the market.",
+            "company": "Simply Jet",
+            "location": "Laussane, Switzerland",
+            "duration": "March 2022 - Present"
+        },
+        {
+            "id": 2,
+            "title": "Software Engineer Intern",
+            "logo": "/images/tally-logo.png",
+            "description": "I worked on a File Tagging Application using .NET Framework 4.7.2 Windows Form, C#, and SQLite Database. This application allows users to add tags to files in NTFS file systems for easier searching and organization. Tags can include categories like School, College, Important, Work, etc.",
+            "company": "Tally Solutions Pvt Ltd",
+            "location": "Bengaluru, India",
+            "duration": "October 2022 - January 2023"
+        },
+        {
+            "id": 3,
+            "title": "Full Stack Web Developer",
+            "logo": "/images/datapitcher-logo.jpeg",
+            "description": "Worked as a Backend and ReactJS developer intern. Developed a full-fledged Authentication System using NodeJS, ExpressJS, MongoDB, and JWT. Integrated Send Grid API for email sending and Razorpay Payment Gateway for payment processing. Implemented lightweight UI and complex animations using Tailwind CSS and Material UI.",
+            "company": "DataPitcher",
+            "location": "Toronto, Canada",
+            "duration": "December 2021 - February 2022"
+        },
+        {
+            "id": 4,
+            "title": "Full Stack Development Mentor",
+            "logo": "/images/10xacademy-logo.png",
+            "description": "Mentored 100+ students to become Full Stack Developers. Solved doubts related to ReactJS, NodeJS, ExpressJS, and MongoDB. Taught students about effective communication skills and mentored them with problem-solving, Data Structures, and Algorithm challenges.",
+            "company": "The 10x Academy",
+            "location": "Hyderabad, India",
+            "duration": "December 2021 - April 2022"
+        }
+    ]
+}
