@@ -2,6 +2,20 @@
 # yarn lockfile v1
 
 
+"@anthropic-ai/sdk@^0.20.1":
+  version "0.20.9"
+  resolved "https://registry.npmjs.org/@anthropic-ai/sdk/-/sdk-0.20.9.tgz"
+  integrity sha512-Lq74+DhiEQO6F9/gdVOLmHx57pX45ebK2Q/zH14xYe1157a7QeUVknRqIp0Jz5gQI01o7NKbuv9Dag2uQsLjDg==
+  dependencies:
+    "@types/node" "^18.11.18"
+    "@types/node-fetch" "^2.6.4"
+    abort-controller "^3.0.0"
+    agentkeepalive "^4.2.1"
+    form-data-encoder "1.7.2"
+    formdata-node "^4.3.2"
+    node-fetch "^2.6.7"
+    web-streams-polyfill "^3.2.1"
+
 "@anthropic-ai/sdk@^0.9.1":
   version "0.9.1"
   resolved "https://registry.npmjs.org/@anthropic-ai/sdk/-/sdk-0.9.1.tgz"
@@ -262,6 +276,17 @@
   version "1.2.1"
   resolved "https://registry.npmjs.org/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
+
+"@langchain/anthropic@^0.1.17":
+  version "0.1.17"
+  resolved "https://registry.npmjs.org/@langchain/anthropic/-/anthropic-0.1.17.tgz"
+  integrity sha512-zbyTXtbFh0P0EEi+Q/AgDJlz/tltAg9ddVptew3IcQM1c6Yc7lG9oUqh14uzFUKPae2kFDKE78jrx1oiV4JMgw==
+  dependencies:
+    "@anthropic-ai/sdk" "^0.20.1"
+    "@langchain/core" "~0.1.56"
+    fast-xml-parser "^4.3.5"
+    zod "^3.22.4"
+    zod-to-json-schema "^3.22.4"
 
 "@langchain/cohere@^0.0.8":
   version "0.0.8"
@@ -1600,6 +1625,13 @@ fast-levenshtein@^2.0.6:
   version "2.0.6"
   resolved "https://registry.npmjs.org/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz"
   integrity sha512-DCXu6Ifhqcks7TZKY3Hxp3y6qphY5SJZmrWMDrKcERSOXWQdMhU9Ig/PYrzyw/ul9jOIyh0N4M0tbC5hodg8dw==
+
+fast-xml-parser@^4.3.5:
+  version "4.3.6"
+  resolved "https://registry.npmjs.org/fast-xml-parser/-/fast-xml-parser-4.3.6.tgz"
+  integrity sha512-M2SovcRxD4+vC493Uc2GZVcZaj66CCJhWurC4viynVSTvrpErCShNcDz1lAho6n9REQKvL/ll4A4/fw6Y9z8nw==
+  dependencies:
+    strnum "^1.0.5"
 
 fastq@^1.6.0:
   version "1.14.0"
@@ -2954,6 +2986,11 @@ strip-json-comments@^3.1.0, strip-json-comments@^3.1.1:
   resolved "https://registry.npmjs.org/strip-json-comments/-/strip-json-comments-3.1.1.tgz"
   integrity sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==
 
+strnum@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.npmjs.org/strnum/-/strnum-1.0.5.tgz"
+  integrity sha512-J8bbNyKKXl5qYcR36TIO8W3mVGVHrmmxsd5PAItGkmyzwJvybiw2IVq5nqd0i4LSNSkB/sx9VHllbfFdr9k1JA==
+
 style-to-js@1.1.0:
   version "1.1.0"
   resolved "https://registry.npmjs.org/style-to-js/-/style-to-js-1.1.0.tgz"
@@ -3236,7 +3273,7 @@ yocto-queue@^0.1.0:
   resolved "https://registry.npmjs.org/yocto-queue/-/yocto-queue-0.1.0.tgz"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
 
-zod-to-json-schema@^3.22.3, zod-to-json-schema@^3.22.5:
+zod-to-json-schema@^3.22.3, zod-to-json-schema@^3.22.4, zod-to-json-schema@^3.22.5:
   version "3.23.0"
   resolved "https://registry.npmjs.org/zod-to-json-schema/-/zod-to-json-schema-3.23.0.tgz"
   integrity sha512-az0uJ243PxsRIa2x1WmNE/pnuA05gUq/JB8Lwe1EDCCL/Fz9MgjYQ0fPlyc2Tcv6aF2ZA7WM5TWaRZVEFaAIag==

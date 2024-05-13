@@ -33,7 +33,9 @@ export default async function handler(
         process.env.SUPABASE_API_KEY || ""
       );
 
-      const openaiEmbeddingModel = new OpenAIEmbeddings();
+      const openaiEmbeddingModel = new OpenAIEmbeddings({
+        openAIApiKey: process.env.OPENAI_API_KEY || "",
+      });
 
       const cohereEmbeddingModel = new CohereEmbeddings({
         apiKey: process.env.COHERE_API_KEY || "",

@@ -12,6 +12,7 @@
     "@emailjs/browser": "^3.10.0",
     "@emotion/react": "^11.10.5",
     "@emotion/server": "^11.10.0",
+    "@langchain/anthropic": "^0.1.17",
     "@langchain/cohere": "^0.0.8",
     "@langchain/community": "^0.0.56",
     "@langchain/core": "^0.1.62",
