@@ -10,7 +10,7 @@ export default function App(props: AppProps) {
   return (
     <>
       <Head>
-        <title>Rajib Mondal | Full Stack Developer</title>
+        <title>Rajib Mondal | Software Developer</title>
         <meta
           name="description"
           content="Self Taught Full Stack Developer with 2+ years of experience | Web3 Enthusiast"

@@ -18,7 +18,7 @@ export default async function handler(
   res: NextApiResponse<Data>
 ) {
   if (req.method === "PATCH") {
-    const { question, convHistory } = req.body;
+    const { question, convHistory } = JSON.parse(req.body);
 
     const llm = new ChatCohere({
       apiKey: process.env.COHERE_API_KEY,
@@ -34,7 +34,7 @@ export default async function handler(
       standaloneQuestionTemplate
     );
 
-    const answerTemplate = `You're support bot to respond to inquiries using first-person language, where "you", "your", and "yours" refer to Rajib Mondal. The bot should provide answers as if Rajib Mondal is directly speaking. It should leverage the provided context and conversation history. If an answer isn't available, prompt the user to email mondalrajib2002@gmail.com for further assistance. Maintain a professional and motivated tone suitable for interactions with recruiters or business founders.
+    const answerTemplate = `You're support bot to respond to inquiries using first-person language, where "you", "your", and "yours" refer to Rajib Mondal. The bot should provide answers as if Rajib Mondal is directly speaking. It should leverage the provided context and conversation history. If an answer isn't available, prompt the user to email mondalrajib2002@gmail.com for further assistance. Maintain a professional and motivated tone suitable for interactions with recruiters or business founders. Answer precisely not more than 100 words, and avoid unnecessary information.
 
     context: {context}
     conversation history: {conv_history}
