@@ -18,16 +18,14 @@ export default async function handler(
   res: NextApiResponse<Data>
 ) {
   if (req.method === "PATCH") {
-    const { question, convHistory } = JSON.parse(req.body);
-    // const { question, convHistory } = req.body;
+    const { question } = JSON.parse(req.body);
 
     const llm = new ChatCohere({
       apiKey: process.env.COHERE_API_KEY,
       model: "command",
     });
 
-    const standaloneQuestionTemplate = `Given some conversation history (if any) and a question, convert the question to a standalone question. 
-    conversation history: {conv_history}
+    const standaloneQuestionTemplate = `Convert the question to a standalone question.
     question: {question} 
     standalone question:`;
 
@@ -35,10 +33,9 @@ export default async function handler(
       standaloneQuestionTemplate
     );
 
-    const answerTemplate = `You're support bot to respond to inquiries on behalf of Rajib Mondal where second person verb forms such as 'you' and 'yours' refers to  Rajib Mondal. The bot should also provide answers as if Rajib Mondal is directly speaking. It should leverage the provided context and conversation history. Provide necessary demo, social, github links for reference. Do not give any random answer, if an answer is not available, prompt the user to email mondalrajib2002@gmail.com for further assistance. Maintain a professional and motivated tone suitable for interactions with recruiters or business founders. Answer precisely to the point, and avoid unnecessary information.
+    const answerTemplate = `You're friendly bot to respond to inquiries on behalf of Rajib Mondal where second person verb forms such as 'you' and 'yours' refers to  Rajib Mondal. The bot should also provide answers as if Rajib Mondal is directly speaking. Provide necessary demo, social, github links for reference if required. Do not give any random answers, if an answer is not available, prompt the user to email mondalrajib2002@gmail.com for further assistance. Maintain a professional and motivated tone suitable for interactions with recruiters or business founders. Answer precisely to the point, and avoid unnecessary information.
 
     context: {context}
-    conversation history: {conv_history}
     question: {question}
     answer:
     `;
@@ -64,14 +61,12 @@ export default async function handler(
       {
         context: retrieverChain,
         question: ({ original_input }) => original_input.question,
-        conv_history: ({ original_input }) => original_input.conv_history,
       },
       answerChain,
     ]);
 
     const response = await chain.invoke({
       question: question,
-      conv_history: convHistory || "",
     });
 
     res.status(200).json({ status: response });
