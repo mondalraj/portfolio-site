@@ -65,7 +65,7 @@ const Projects = () => {
             { value: "fullstack", label: "Full Stack" },
             { value: "web3", label: "Web 3" },
             // { value: "react-native", label: "React Native" },
-            // { value: "ai", label: "AI / ML" },
+            { value: "ai", label: "AI / ML" },
           ]}
         />
       </Box>

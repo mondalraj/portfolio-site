@@ -2,9 +2,11 @@ import { CohereEmbeddings } from "@langchain/cohere";
 import { SupabaseVectorStore } from "@langchain/community/vectorstores/supabase";
 import { OpenAIEmbeddings } from "@langchain/openai";
 import { createClient } from "@supabase/supabase-js";
-import { JSONLoader } from "langchain/document_loaders/fs/json";
+import { RecursiveCharacterTextSplitter } from "langchain/text_splitter";
 import type { NextApiRequest, NextApiResponse } from "next";
-import path from "path";
+import { aboutMeText } from "./data/aboutMe";
+import { projectsText } from "./data/projects";
+import { workExperienceText } from "./data/workExperience";
 
 type Data = {
   status: string;
@@ -16,17 +18,30 @@ export default async function handler(
 ) {
   if (req.method === "POST") {
     try {
-      const jsonFilePath = path.resolve(
-        process.cwd(),
-        "pages",
-        "api",
-        "embedding",
-        "data",
-        "workExperience.json"
-      );
-      const loader = new JSONLoader(jsonFilePath);
+      // const jsonFilePath = path.resolve(
+      //   process.cwd(),
+      //   "pages",
+      //   "api",
+      //   "embedding",
+      //   "data",
+      //   "workExperience.json"
+      // );
 
-      const docs = await loader.load();
+      // const loader = new JSONLoader(jsonFilePath);
+
+      // const docs = await loader.load();
+
+      const splitter = new RecursiveCharacterTextSplitter({
+        chunkSize: 1000,
+        chunkOverlap: 50,
+        separators: ["##", "\n\n", "\n", " ", ""],
+      });
+
+      const output = await splitter.createDocuments([
+        workExperienceText,
+        projectsText,
+        aboutMeText,
+      ]);
 
       const client = createClient(
         process.env.SUPABASE_PROJECT_URL || "",
@@ -42,7 +57,7 @@ export default async function handler(
         batchSize: 48,
       });
 
-      await SupabaseVectorStore.fromDocuments(docs, cohereEmbeddingModel, {
+      await SupabaseVectorStore.fromDocuments(output, cohereEmbeddingModel, {
         client,
         tableName: "documents",
       });

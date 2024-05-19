@@ -10,7 +10,6 @@ import {
 import { IconMail, IconPhone, IconSend } from "@tabler/icons";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import { formatConvHistory } from "../../utils/formatConvHistory";
 
 const Chatbox = () => {
   const [convHistory, setConvHistory] = useState<string[]>([
@@ -40,9 +39,9 @@ const Chatbox = () => {
       method: "PATCH",
       body: JSON.stringify({
         question: message,
-        convHistory: formatConvHistory(
-          convHistory?.filter((_, index) => index !== 0) || []
-        ),
+        // convHistory: formatConvHistory(
+        //   convHistory?.filter((_, index) => index !== 0) || []
+        // ),
       }),
     })
       .then((res) => res.json())

@@ -1,6 +1,7 @@
 import { IconBrandMantine } from "@tabler/icons";
 import { AiOutlineFilePdf } from "react-icons/ai";
 import { DiCss3Full, DiMongodb } from "react-icons/di";
+import { FaRobot } from "react-icons/fa";
 import {
   SiAuth0,
   SiChainlink,
@@ -8,10 +9,12 @@ import {
   SiFramer,
   SiNextdotjs,
   SiNodedotjs,
+  SiOpenai,
   SiPostgresql,
   SiPrisma,
   SiReact,
   SiSolidity,
+  SiSupabase,
   SiTailwindcss,
   SiTypescript,
   SiWeb3Dotjs,
@@ -19,6 +22,24 @@ import {
 import { TbApi } from "react-icons/tb";
 
 const projectData = [
+  {
+    title: "Personal Portfolio",
+    description:
+      "A comprehensive digital portfolio showcasing work experience, projects, achievements, education, and skills. Features a personalized interacting chatbot for enhanced user engagement",
+    techStack: [
+      { name: "Next.js", icon: SiNextdotjs },
+      { name: "Typescript", icon: SiTypescript },
+      { name: "Mantine UI", icon: IconBrandMantine },
+      { name: "Framer Motion", icon: SiFramer },
+      { name: "Langchain", icon: FaRobot },
+      { name: "Supabase", icon: SiSupabase },
+      { name: "Cohere/Gemini LLM", icon: SiOpenai },
+    ],
+    github: "https://github.com/mondalraj/portfolio-site",
+    demo: "https://rajibmondal.vercel.app/",
+    thumbnail: "/images/projects/portfolio.png",
+    tags: ["all", "frontend", "fullstack", "ai"],
+  },
   {
     title: "Sleek CV",
     description:
