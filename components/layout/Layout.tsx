@@ -15,6 +15,8 @@ import Chatbox from "./Chatbox";
 import Footer from "./Footer";
 import { FooterCTA } from "./FooterCTA";
 import Navbar from "./Navbar";
+import { useSearchParams } from "next/navigation";
+import axios from "axios";
 
 const Layout = ({
   children,
@@ -28,6 +30,26 @@ const Layout = ({
     x: 0,
     y: 0,
   });
+
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    const getIpInfo = async () => {
+      const res = await axios.get("https://ipinfo.io/?token=5e056099665816");
+      return res.data;
+    };
+    if (searchParams.get("source")) {
+      getIpInfo().then((data) => {
+        console.log(data);
+        axios.post("/api/track-pagevisit", {
+          source: searchParams.get("source"),
+          city: data.city,
+          country: data.country,
+          loc: data.loc,
+        });
+      });
+    }
+  }, [searchParams]);
 
   useEffect(() => {
     const mouseMove = (e: { clientX: number; clientY: number }) => {

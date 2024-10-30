@@ -1,0 +1,11 @@
+- Add a tracking ?source=linkedin/github/resume to the URL
+- Add IPinfo tracking to track the user details
+- Remove Schedule a meeting button, replace it with Resume
+- Add a header banner in the homepage (similar to linkedin profile banner)
+- Only show relative link buttons
+- Update all the information in the portfolio (inspiration from github, linkedin)
+- Update the header (make it sticky) with glassmorphism effect
+- Update Footer similar to mantine, and nexg.tech
+- If possible add some linkedin embedded featured posts
+- Replace sticky chat button with social links (or whatsapp link)
+- Add a testimonial section (recommendations from Linkedin/ Experience letter)
