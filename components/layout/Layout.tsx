@@ -1,22 +1,16 @@
-import {
-  ActionIcon,
-  Affix,
-  Box,
-  Container,
-  Tooltip,
-  Transition,
-} from "@mantine/core";
+import { ActionIcon, Affix, Box, Tooltip, Transition } from "@mantine/core";
+import Lenis from "@studio-freight/lenis";
 import { IconX } from "@tabler/icons";
+import axios from "axios";
 import { motion, useScroll, useSpring } from "framer-motion";
-import { ReactNode, useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
+import { ReactNode, useEffect, useLayoutEffect, useState } from "react";
 import { TbMessageCircle2 } from "react-icons/tb";
 import IsMobileScreen from "../../hooks/useIsMobileScreen";
 import Chatbox from "./Chatbox";
 import Footer from "./Footer";
 import { FooterCTA } from "./FooterCTA";
 import Navbar from "./Navbar";
-import { useSearchParams } from "next/navigation";
-import axios from "axios";
 
 const Layout = ({
   children,
@@ -32,6 +26,19 @@ const Layout = ({
   });
 
   const searchParams = useSearchParams();
+
+  useLayoutEffect(() => {
+    const lenis = new Lenis({
+      lerp: 0.1,
+      duration: 1,
+    });
+    function raf(time: any) {
+      lenis.raf(time);
+
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+  }, []);
 
   useEffect(() => {
     const getIpInfo = async () => {
@@ -96,11 +103,13 @@ const Layout = ({
         <motion.div className="cursor" variants={variants} animate="default" />
       )}
       <Navbar currentPage={currentPage} />
-      <Container>{children}</Container>
+
+      {children}
 
       <FooterCTA />
 
       <Footer />
+
       <Affix position={{ bottom: 80, right: 20 }}>
         <Transition transition="slide-up" mounted={chatboxOpened}>
           {(transitionStyles) => (

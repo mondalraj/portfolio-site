@@ -13,9 +13,9 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <Box
-      sx={{
+      sx={(theme) => ({
         backgroundColor: "black",
-      }}
+      })}
     >
       <Container
         sx={{
@@ -25,7 +25,7 @@ const Footer = () => {
           justifyContent: "center",
           gap: "1rem",
           fontSize: "1.1rem",
-          padding: "2.5rem 0",
+          padding: "1rem 0",
         }}
       >
         <Box
@@ -160,7 +160,7 @@ const Footer = () => {
 
           <Tooltip label="Download Resume" withArrow>
             <a
-              href="https://drive.google.com/file/d/1FU3jo1o0XuFX-k4drttum9wz-61kq7Cu/view?usp=sharing"
+              href="https://drive.google.com/file/d/1pCX2iT5Bd_tM5vSNjEmddNLEsxqH-v5R/view?usp=sharing"
               target={"_blank"}
               rel="noreferrer"
             >

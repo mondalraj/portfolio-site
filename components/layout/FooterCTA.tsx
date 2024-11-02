@@ -2,7 +2,6 @@ import {
   Box,
   Button,
   Container,
-  Overlay,
   Text,
   Title,
   createStyles,
@@ -13,7 +12,8 @@ const useStyles = createStyles((theme) => ({
   wrapper: {
     position: "relative",
     paddingTop: "50px",
-    paddingBottom: "50px",
+    paddingBottom: "40px",
+    backgroundColor: "black",
 
     [theme.fn.smallerThan("xs")]: {
       paddingTop: "50px",
@@ -101,8 +101,6 @@ export function FooterCTA() {
 
   return (
     <div className={classes.wrapper} id="#schedule-meeting">
-      <Overlay color="#000" opacity={0.65} zIndex={1} />
-
       <div className={classes.inner}>
         <Title className={classes.title}>
           Build{" "}

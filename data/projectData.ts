@@ -111,7 +111,7 @@ const projectData = [
   },
 
   {
-    title: " Netflix Clone",
+    title: "Netflix Clone",
     description:
       "This is the cloned homepage of Netflix, where I have fetched the data from the official TMDB API to render the list of movies and series in real-time.",
     techStack: [

@@ -2,6 +2,7 @@ import { Box, Spoiler, Text, Timeline } from "@mantine/core";
 import { IconChevronRight } from "@tabler/icons";
 import Image from "next/image";
 import Link from "next/link";
+import workData from "../../data/workData";
 
 const WorkSection = () => {
   return (
@@ -25,139 +26,80 @@ const WorkSection = () => {
         Work Experience
       </Text>
       <Timeline active={0} bulletSize={40} lineWidth={3}>
-        <Timeline.Item
-          pb={30}
-          active={true}
-          color="pink"
-          bullet={
-            <Image
-              src="/images/simplyjet-logo.jpeg"
-              alt="DataPitcher"
-              width={40}
-              height={40}
-              style={{
-                borderRadius: "50%",
-                zIndex: 200,
-              }}
-            />
-          }
-          title={
-            <Text size="lg" ml={10} color="white">
-              Software Developer
-            </Text>
-          }
-        >
-          <Text size="md" ml={10}>
-            <Spoiler maxHeight={70} showLabel="Show more" hideLabel="Hide">
-              Rebranding the company&apos;s website and admin dashboard using
-              Typescript, NextJS, NestJS, PostgreSQL, Mantine UI, etc to
-              increase the company&apos;s revenue and efficiency.
-              <br />
-              Developed complex operational workflow for brokers, admin,
-              marketing team to manage their clients and leads efficiently.
-              <br />
-              Developing modern and responsive frontend UI using Mantine UI and
-              Framer Motion that provides a seamless user experience.
-              <br />
-              Developed a Slack App integration with the Whatsapp Cloud API in
-              Python, that makes the process of lead generation and conversion
-              more smoother and efficient.
-              <br />
-              Developed a custom CMS system for the company to manage
-              internationalization and localization of the website supporting 6
-              languages worldwide.
-              <br />
-              Actively enhancing the company&apos;s website SEO by optimizing
-              the website&apos;s performance and implementing new SEO
-              strategies.
-              <br />
-              Actively participating in the company&apos;s product development
-              meetings and providing valuable insights to improve the product to
-              meet the market&apos;s needs.
-            </Spoiler>
-          </Text>
-          <Text
-            color="dimmed"
-            size="sm"
-            mt={4}
-            ml={10}
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              gap: "0.5rem",
-            }}
-          >
-            Simply Jet{" "}
-            <Text
-              sx={{
-                width: "5px",
-                height: "5px",
-                borderRadius: "50%",
-                backgroundColor: "gray",
-              }}
-            />
-            Laussane, Switzerland
-          </Text>
-        </Timeline.Item>
+        {workData
+          ?.filter((work, index) => index < 2)
+          ?.map((work, index) => (
+            <Timeline.Item
+              key={index}
+              pb={30}
+              active={true}
+              color="pink"
+              bullet={
+                <Image
+                  src={work.logo}
+                  alt={work.company}
+                  width={40}
+                  height={40}
+                  style={{
+                    borderRadius: "50%",
+                    zIndex: 200,
+                  }}
+                />
+              }
+              title={
+                <Text size="lg" ml={10} color="white">
+                  {work.title}
+                </Text>
+              }
+            >
+              <Text size="md" ml={10}>
+                <Spoiler
+                  maxHeight={index === 0 ? 250 : 80}
+                  showLabel="Show more"
+                  hideLabel="Hide"
+                  sx={{
+                    whiteSpace: "pre-line",
+                  }}
+                >
+                  {work.description}
+                </Spoiler>
+              </Text>
+              <Text
+                color="dimmed"
+                size="sm"
+                mt={4}
+                ml={10}
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "0.5rem",
 
-        <Timeline.Item
-          bullet={
-            <Image
-              src="/images/datapitcher-logo.jpeg"
-              alt="DataPitcher"
-              width={40}
-              height={40}
-              style={{
-                borderRadius: "50%",
-                zIndex: 200,
-              }}
-            />
-          }
-          title={
-            <Text size="lg" color="white" ml={10}>
-              Full Stack Web Developer
-            </Text>
-          }
-        >
-          <Text size="md" ml={10}>
-            <Spoiler maxHeight={70} showLabel="Show more" hideLabel="Hide">
-              Worked as Backend and ReactJS developer Intern. <br />
-              Developed a full-fledged Authentication System using NodeJS,
-              ExpressJS, MongoDB, and JWT.
-              <br />
-              Integrated Send Grid API to send emails to clients on their first
-              signup.
-              <br />
-              Implemented Razorpay Payment Gateway to accept payments from
-              clients.
-              <br />
-              Developed Light Weight UI and Complex Animations using Tailwind
-              CSS and Material UI.
-            </Spoiler>
-          </Text>
-          <Text
-            color="dimmed"
-            size="sm"
-            mt={4}
-            ml={10}
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              gap: "0.5rem",
-            }}
-          >
-            DataPitcher{" "}
-            <Text
-              sx={{
-                width: "5px",
-                height: "5px",
-                borderRadius: "50%",
-                backgroundColor: "gray",
-              }}
-            />
-            Toronto, Canada
-          </Text>
-        </Timeline.Item>
+                  "@media (max-width: 768px)": {
+                    flexDirection: "column",
+                    alignItems: "flex-start",
+                    gap: "0.2rem",
+                  },
+                }}
+              >
+                <Text>{work.company} </Text>
+                <Text
+                  sx={{
+                    width: "5px",
+                    height: "5px",
+                    borderRadius: "50%",
+                    backgroundColor: "gray",
+
+                    "@media (max-width: 768px)": {
+                      display: "none",
+                    },
+                  }}
+                />
+                <Text>
+                  {work.location} - ({work.duration})
+                </Text>
+              </Text>
+            </Timeline.Item>
+          ))}
       </Timeline>
       <Text
         // className="underlineLinks"

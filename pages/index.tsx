@@ -1,3 +1,4 @@
+import { Container } from "@mantine/core";
 import AboutSection from "../components/home/AboutSection";
 import EducationSection from "../components/home/EducationSection";
 import ProjectSection from "../components/home/ProjectSection";
@@ -9,10 +10,12 @@ export default function Home() {
   return (
     <Layout currentPage="Home">
       <AboutSection />
-      <SkillsSection />
-      <WorkSection />
-      <ProjectSection />
-      <EducationSection />
+      <Container>
+        <SkillsSection />
+        <WorkSection />
+        <ProjectSection />
+        <EducationSection />
+      </Container>
     </Layout>
   );
 }

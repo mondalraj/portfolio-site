@@ -24,6 +24,7 @@
     "@mantine/next": "^5.9.5",
     "@mantine/nprogress": "^5.9.5",
     "@next/font": "13.1.1",
+    "@studio-freight/lenis": "^1.0.42",
     "@supabase/supabase-js": "^2.43.1",
     "@types/node": "18.11.18",
     "@types/react": "18.0.26",

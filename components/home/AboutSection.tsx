@@ -1,279 +1,223 @@
-import { ActionIcon, Box, Text, Tooltip } from "@mantine/core";
 import {
-  IconBrandGithub,
-  IconBrandLinkedin,
-  IconBrandTwitter,
-  IconDownload,
-  IconMail,
-  IconPhone,
-} from "@tabler/icons";
-import Image from "next/image";
+  ActionIcon,
+  Box,
+  Container,
+  Image,
+  Text,
+  Tooltip,
+} from "@mantine/core";
+import { useMediaQuery } from "@mantine/hooks";
+import { IconBrandGithub, IconBrandLinkedin, IconMail } from "@tabler/icons";
 
 const AboutSection = () => {
+  const isMobile = useMediaQuery("(max-width: 824px)", true, {
+    getInitialValueInEffect: false,
+  });
   return (
-    <Box
-      sx={{
-        display: "flex",
-        flexDirection: "row-reverse",
-        justifyContent: "space-between",
-        alignItems: "flex-start",
-        width: "100%",
-        gap: "2rem",
-        padding: "4rem 0",
-
-        "@media (max-width: 768px)": {
-          flexDirection: "column-reverse",
-          alignItems: "center",
-        },
-      }}
-    >
+    <Box>
       <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "flex-start",
-          gap: "1.5rem",
+        style={{
+          position: "relative",
         }}
       >
-        <h1
-          style={{
-            color: "white",
-          }}
-        >
-          Rajib Mondal
-        </h1>
-        <Text
-          sx={{
-            fontSize: "1.1rem",
-            display: "flex",
-            alignItems: "center",
-            flexWrap: "wrap",
-            color: "white",
-          }}
-        >
-          Software Developer
-          <Text
-            sx={{
-              width: "5px",
-              height: "5px",
-              borderRadius: "50%",
-              backgroundColor: "white",
-              margin: "0 1rem",
+        <Image
+          src={
+            isMobile
+              ? "images/cover-image-mobile.png"
+              : "images/cover-image.png"
+          }
+          alt="Cover Image"
+        />
+        <Container>
+          <Image
+            src="/images/rajib-profile-image.jpeg"
+            alt="Rajib Mondal"
+            width={isMobile ? 140 : 250}
+            height={isMobile ? 140 : 250}
+            radius={200}
+            style={{
+              position: "absolute",
+              bottom: isMobile ? "-30%" : "-20%",
             }}
           />
-          Former SWE Intern&nbsp;
-          <Text
-            variant="gradient"
-            gradient={{ from: "#F3EC78", to: "#EA7EEB", deg: 45 }}
-            ta="center"
-            sx={{
-              fontSize: "1.1rem",
-            }}
-            fw={600}
-          >
-            @Tally Solutions
-          </Text>
-          <Text
-            sx={{
-              width: "5px",
-              height: "5px",
-              borderRadius: "50%",
-              backgroundColor: "white",
-              margin: "0 1rem",
-            }}
-          />
-          Mentored 200+&nbsp;
-          <Text
-            variant="gradient"
-            gradient={{ from: "#F3EC78", to: "#EA7EEB", deg: 45 }}
-            ta="center"
-            sx={{
-              fontSize: "1.1rem",
-            }}
-            fw={600}
-          >
-            MERN&nbsp;
-          </Text>
-          Aspirants
-          <Text
-            sx={{
-              width: "5px",
-              height: "5px",
-              borderRadius: "50%",
-              backgroundColor: "white",
-              margin: "0 1rem",
-            }}
-          />
-          Data Science Enthusiast
-        </Text>
-        <Text size={"md"}>
-          Greetings, I am a seasoned full-stack software developer with a
-          proficiency in crafting robust and scalable end-to-end software
-          solutions, backed by over 3 years of hands-on industry experience.
-        </Text>
+        </Container>
+      </Box>
+      <Container>
         <Box
           sx={{
             display: "flex",
-            flexDirection: "row",
-            justifyContent: "flex-start",
-            alignItems: "center",
-            gap: "1rem",
+            flexDirection: "row-reverse",
+            justifyContent: "space-between",
+            alignItems: "flex-start",
+            width: "100%",
+            gap: "2rem",
+            padding: "4rem 0",
+            marginTop: isMobile ? "1rem" : "3rem",
+
+            "@media (max-width: 768px)": {
+              flexDirection: "column-reverse",
+              alignItems: "center",
+            },
           }}
         >
-          <Tooltip label="Phone" withArrow>
-            <a href="tel:+9958164563" target={"_blank"} rel="noreferrer">
-              <ActionIcon
-                size="lg"
-                color="gray"
-                radius={100}
-                variant="outline"
-                sx={{
-                  padding: "0.35rem",
-                  cursor: "none",
-                }}
-              >
-                <IconPhone size={26} />
-              </ActionIcon>
-            </a>
-          </Tooltip>
-          <Tooltip label="Gmail" withArrow>
-            <a href="mailto:mondalrajib2002@gmail.com">
-              <ActionIcon
-                size="lg"
-                color="gray"
-                radius={100}
-                variant="outline"
-                sx={{
-                  padding: "0.35rem",
-                  cursor: "none",
-                }}
-              >
-                <IconMail size={26} />
-              </ActionIcon>
-            </a>
-          </Tooltip>
-          <Tooltip label="Github" withArrow>
-            <a
-              href="https://github.com/mondalraj"
-              target={"_blank"}
-              rel="noreferrer"
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "flex-start",
+              gap: "1.5rem",
+            }}
+          >
+            <Box
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+                gap: "1rem",
+                width: "100%",
+                justifyContent: "space-between",
+              }}
             >
-              <ActionIcon
-                size="lg"
-                color="gray"
-                radius={100}
-                variant="outline"
-                sx={{
-                  padding: "0.35rem",
-                  cursor: "none",
+              <h1
+                style={{
+                  color: "white",
+                  width: "100%",
                 }}
               >
-                <IconBrandGithub size={26} />
-              </ActionIcon>
-            </a>
-          </Tooltip>
-          <Tooltip label="Linkedin" withArrow>
-            <a
-              href="https://www.linkedin.com/in/mondalraj/"
-              target={"_blank"}
-              rel="noreferrer"
+                Rajib Mondal
+              </h1>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "0.6rem",
+                }}
+              >
+                <Tooltip label="Gmail" withArrow>
+                  <a href="mailto:mondalrajib2002@gmail.com">
+                    <ActionIcon
+                      size="lg"
+                      color="gray"
+                      radius={100}
+                      variant="outline"
+                      sx={{
+                        padding: "0.35rem",
+                        cursor: "none",
+                      }}
+                    >
+                      <IconMail size={26} />
+                    </ActionIcon>
+                  </a>
+                </Tooltip>
+                <Tooltip label="Github" withArrow>
+                  <a
+                    href="https://github.com/mondalraj"
+                    target={"_blank"}
+                    rel="noreferrer"
+                  >
+                    <ActionIcon
+                      size="lg"
+                      color="gray"
+                      radius={100}
+                      variant="outline"
+                      sx={{
+                        padding: "0.35rem",
+                        cursor: "none",
+                      }}
+                    >
+                      <IconBrandGithub size={26} />
+                    </ActionIcon>
+                  </a>
+                </Tooltip>
+                <Tooltip label="Linkedin" withArrow>
+                  <a
+                    href="https://www.linkedin.com/in/mondalraj/"
+                    target={"_blank"}
+                    rel="noreferrer"
+                  >
+                    <ActionIcon
+                      size="lg"
+                      color="gray"
+                      radius={100}
+                      variant="outline"
+                      sx={{
+                        padding: "0.35rem",
+                        cursor: "none",
+                      }}
+                    >
+                      <IconBrandLinkedin size={26} />
+                    </ActionIcon>
+                  </a>
+                </Tooltip>
+              </Box>
+            </Box>
+            <Text
+              sx={{
+                fontSize: "1.1rem",
+                display: "flex",
+                alignItems: "center",
+                flexWrap: "wrap",
+                color: "white",
+              }}
             >
-              <ActionIcon
-                size="lg"
-                color="gray"
-                radius={100}
-                variant="outline"
+              Software Engineer (Full Stack)&nbsp;
+              <Text
+                variant="gradient"
+                gradient={{ from: "#F3EC78", to: "#EA7EEB", deg: 45 }}
+                ta="center"
                 sx={{
-                  padding: "0.35rem",
-                  cursor: "none",
+                  fontSize: "1.1rem",
                 }}
+                fw={600}
               >
-                <IconBrandLinkedin size={26} />
-              </ActionIcon>
-            </a>
-          </Tooltip>
-          <Tooltip label="Twitter" withArrow>
-            <a
-              href="https://twitter.com/_mondalraj"
-              target={"_blank"}
-              rel="noreferrer"
-            >
-              <ActionIcon
-                size="lg"
-                color="gray"
-                radius={100}
-                variant="outline"
+                @Simply Jet
+              </Text>
+              <Text
                 sx={{
-                  padding: "0.35rem",
-                  cursor: "none",
+                  width: "5px",
+                  height: "5px",
+                  borderRadius: "50%",
+                  backgroundColor: "white",
+                  margin: "0 0.7rem",
                 }}
-              >
-                <IconBrandTwitter size={26} />
-              </ActionIcon>
-            </a>
-          </Tooltip>
-          <Tooltip label="Hashnode" withArrow>
-            <a
-              href="https://rajibmondal.hashnode.dev/"
-              target={"_blank"}
-              rel="noreferrer"
-            >
-              <ActionIcon
-                size="lg"
-                color="gray"
-                radius={100}
-                variant="outline"
+              />
+              Mentored 200+&nbsp;
+              <Text
+                variant="gradient"
+                gradient={{ from: "#F3EC78", to: "#EA7EEB", deg: 45 }}
+                ta="center"
                 sx={{
-                  padding: "0.35rem",
-                  cursor: "none",
+                  fontSize: "1.1rem",
                 }}
+                fw={600}
               >
-                <Image
-                  src="/images/hashnode-icon.png"
-                  alt="Hashnode icon"
-                  width={20}
-                  height={20}
-                  color="gray"
-                />
-              </ActionIcon>
-            </a>
-          </Tooltip>
-
-          <Tooltip label="Download Resume" withArrow>
-            <a
-              href="https://drive.google.com/file/d/1FU3jo1o0XuFX-k4drttum9wz-61kq7Cu/view?usp=sharing"
-              target={"_blank"}
-              rel="noreferrer"
-            >
-              <ActionIcon
-                size="lg"
-                color="gray"
-                radius={100}
-                variant="outline"
+                MERN&nbsp;
+              </Text>
+              Aspirants
+              <Text
                 sx={{
-                  padding: "0.35rem",
-                  cursor: "none",
+                  width: "5px",
+                  height: "5px",
+                  borderRadius: "50%",
+                  backgroundColor: "white",
+                  margin: "0 0.7rem",
                 }}
-              >
-                <IconDownload size={26} />
-              </ActionIcon>
-            </a>
-          </Tooltip>
+              />
+              React.js, Next.js, Typescript, SQL, MongoDB, Node.js, Nest.js,
+              Docker, CI/CD, Generative AI
+            </Text>
+            <Text size={"md"} mt={10} color="dimmed">
+              Experienced Full Stack Developer with over 3 years of experience
+              working in fast-paced startups. Specialized in frontend
+              technologies like React.js and Next.js, and proficient in backend
+              development with Node.js. Strong analytical skills, good grasp of
+              data structures and algorithms, and a passion for delivering
+              innovative web solutions.
+            </Text>
+          </Box>
         </Box>
-      </Box>
-      <Box>
-        <Image
-          src="/images/rajib-profile-image.jpeg"
-          alt="Picture of Rajib Mondal"
-          width={220}
-          height={220}
-          style={{
-            borderRadius: "50%",
-            zIndex: 200,
-          }}
-        />
-      </Box>
+      </Container>
     </Box>
   );
 };

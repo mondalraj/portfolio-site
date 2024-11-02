@@ -10,7 +10,7 @@ const EducationSection = () => {
         justifyContent: "center",
         alignItems: "flex-start",
         gap: "1.5rem",
-        margin: "4rem 0",
+        padding: "4rem 0",
       }}
     >
       <Text
@@ -37,17 +37,26 @@ const EducationSection = () => {
           }
         >
           <Text size="md" ml={10}>
-            9.5 CGPA Overall.
+            Secured an overall CGPA of 9.5.
             <br />
-            Have worked on multiple projects in Web Development and Blockchain
-            Technology with Technical Club Members (Codechef and GDSC).
+            Collaborated on multiple web development and blockchain projects
+            with CodeChef and Google Developer Student Club (GDSC) members.
             <br />
-            1st Runner Up in Incubate IND hackathon powered by Github.
-            <br />
-            2nd Runner Up in Tally CodeBrewers National Hackathon.
-            <br />
-            Top 8 in Hack-o-uplift hackathon powered by Devfolio out of 50
-            teams.
+            Achievements:
+            <ul
+              style={{
+                paddingLeft: "2rem",
+              }}
+            >
+              <li>
+                1st Runner-Up in Incubate IND Hackathon powered by GitHub.
+              </li>
+              <li>2nd Runner-Up in Tally CodeBrewers National Hackathon.</li>
+              <li>
+                Top 8 finalist in Hack-o-uplift Hackathon powered by Devfolio
+                (competing among 50 teams).
+              </li>
+            </ul>
           </Text>
           <Text
             color="dimmed"
@@ -91,10 +100,11 @@ const EducationSection = () => {
               flexWrap: "wrap",
             }}
           >
-            Passed Higher Secondary Education (XII) in&nbsp; Science with 94.6%
-            in 2020 and became the School Topper in Physics. <br />
-            Achieved 10 CGPA in Class X in 2018 and was awarded with the Best
-            Personality Marker Cup by School Chairman.
+            Completed Higher Secondary Education (Class XII) in Science with a
+            score of 94.6% (2020); recognized as School Topper in Physics.{" "}
+            <br />
+            Achieved a 10 CGPA in Class X (2018) and honored with the Best
+            Personality Marker Cup by the School Chairman.
           </Text>
           <Text
             color="dimmed"

@@ -9,3 +9,4 @@
 - If possible add some linkedin embedded featured posts
 - Replace sticky chat button with social links (or whatsapp link)
 - Add a testimonial section (recommendations from Linkedin/ Experience letter)
+- Update Resume and add valid links for resume in portfolio
