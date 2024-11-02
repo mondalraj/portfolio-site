@@ -19,7 +19,7 @@ const Navbar = ({ currentPage }: { currentPage: string }) => {
       <Box
         sx={{
           zIndex: 1000000,
-          height: "4rem",
+          // height: "4rem",
         }}
       >
         <Container
